@@ -1,6 +1,6 @@
 # Mumukshu D.C. - Portfolio
 
-A professional portfolio website for Mumukshu D.C., showcasing expertise as a PTE Instructor, EdTech Developer, and Software Engineer.
+A professional portfolio website for Mumukshu D.C., showcasing expertise as a PTE Instructor and EdTech Developer.
 
 ## Overview
 
