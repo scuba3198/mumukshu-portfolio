@@ -4,6 +4,8 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-2ea44f?style=for-the-badge&logo=github)](https://scuba3198.github.io/mumukshu-portfolio/)
+
 > **PTE Instructor & EdTech Developer** specializing in English proficiency coaching and modern web development.
 
 This portfolio showcases my professional journey, featured projects, and technical skills. It has been reimagined as a modern **React application**, moving away from static HTML to a scalable component-based architecture.
