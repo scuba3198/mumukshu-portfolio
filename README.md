@@ -5,6 +5,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-2ea44f?style=for-the-badge&logo=github)](https://scuba3198.github.io/mumukshu-portfolio/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > **PTE Instructor & EdTech Developer** specializing in English proficiency coaching and modern web development.
 
@@ -67,6 +68,10 @@ src/
 ## 🎨 Design Philosophy
 
 The design uses a **Bento-grid** layout, popular in modern UI/UX for its clean organization and visual hierarchy. It combines a sophisticated font pairing (**Inter** for UI text and **Playfair Display** for headers) with a neutral stone color palette accented by yellow and purple for featured elements.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
