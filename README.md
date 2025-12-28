@@ -1,33 +1,16 @@
-# Mumukshu D.C. - Portfolio
+# React + Vite
 
-A professional portfolio website for Mumukshu D.C., showcasing expertise as a PTE Instructor and EdTech Developer.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Overview
+Currently, two official plugins are available:
 
-This project is a single-page static responsive website designed to highlight professional experience, key projects, and skills. It features a modern "Bento Grid" layout, high-performance styling, and semantic HTML structure.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-**Live Demo:** [https://scuba3198.github.io/mumukshu-portfolio/](https://scuba3198.github.io/mumukshu-portfolio/)
+## React Compiler
 
-## Projects Highlighted
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
--   **[Essay Architect](https://essay-architect.uk/)**: A digital writing assistant powered by Gemini 2.5, featuring an AI examiner and magazine-style interface.
--   **[GeoFlux](https://geoflux.netlify.app/)**: A generative art sandbox using particle physics and fluid dynamics.
+## Expanding the ESLint configuration
 
-## Technology Stack
-
--   **HTML5**: Semantic structure for SEO and accessibility.
--   **Tailwind CSS**: Utility-first CSS framework (configured via CDN for lightweight deployment).
--   **JavaScript**: Minimal vanilla JS for icons and configuration.
--   **Lucide Icons**: Beautiful, consistent icon set.
--   **Google Fonts**: Inter and Playfair Display typography.
-
-## Development
-
-This site is built as a standalone static file for maximum portability and speed.
-
-### key Files
--   `index.html`: Contains all structure, styles (Tailwind config), and logic.
-
-## Deployment
-
-The site is designed to be hosted on **GitHub Pages**. Code is pushed to the `main` branch, and GitHub Pages serves the root directory.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
