@@ -10,7 +10,7 @@ This project is a single-page static responsive website designed to highlight pr
 
 ## Projects Highlighted
 
--   **[Essay Architect](https://essay-architect.uk/)**: A digital writing assistant powered by Gemini 2.5, featuring an AI examiner and magazine-style interface.
+-   **[Essay Architect](https://essay-architect.uk/)**: A digital writing assistant powered by advanced generative language models, featuring an AI examiner and magazine-style interface.
 -   **[GeoFlux](https://geoflux.netlify.app/)**: A generative art sandbox using particle physics and fluid dynamics.
 
 ## Technology Stack
