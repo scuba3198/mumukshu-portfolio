@@ -10,7 +10,7 @@ export const portfolioData = {
         {
             id: "essay-architect",
             title: "Essay Architect Pro",
-            description: "A digital writing assistant now powered by advanced generative language models. V0.2 features an AI Examiner for strict scoring, context-aware autocomplete, and a magazine-style editorial interface for PTE/IELTS mastery.",
+            description: "A digital writing assistant now powered by advanced generative language models. V0.3.0-pro features an AI Examiner for strict scoring, context-aware autocomplete, and a magazine-style editorial interface for PTE/IELTS mastery.",
             tags: ["React.js", "Advanced Generative Models", "Tailwind CSS"],
             link: "https://pro.essay-architect.uk/",
             isFeatured: true,
