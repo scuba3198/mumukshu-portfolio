@@ -1,4 +1,4 @@
-import { GraduationCap, Code2, Briefcase, BookOpen, Palette, Smile, MapPin, ExternalLink } from 'lucide-react';
+import { GraduationCap, Code2, Briefcase, BookOpen, Palette, Smile, MapPin, ExternalLink, Calculator } from 'lucide-react';
 
 export const portfolioData = {
     profile: {
@@ -41,6 +41,26 @@ export const portfolioData = {
                 accent: "text-purple-400",
                 tagBg: "bg-stone-800",
                 tagText: ["text-purple-400", "text-cyan-400"]
+            }
+        },
+        {
+            id: "salary-calculator",
+            title: "Nepali Salary Calculator",
+            description: "A professional tool for tracking workdays and calculating monthly earnings using the native Bikram Sambat (B.S.) calendar. Features automated TDS calculation, historical data tracking, and a premium Glassmorphism-style interface.",
+            tags: ["React.js", "Supabase", "JS-B.S.", "Vanilla CSS"],
+            link: "https://scuba3198.github.io/salary-calculator/",
+            isFeatured: false,
+            category: "Productivity Tool",
+            categoryBg: "bg-emerald-600",
+            iconName: "Calculator",
+            theme: {
+                bg: "bg-stone-900",
+                text: "text-white",
+                border: "border-stone-800",
+                hoverBorder: "hover:border-emerald-500",
+                accent: "text-emerald-400",
+                tagBg: "bg-stone-800",
+                tagText: "text-emerald-400"
             }
         }
     ],

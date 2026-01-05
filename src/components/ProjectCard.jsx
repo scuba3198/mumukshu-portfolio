@@ -1,9 +1,10 @@
 import React from 'react';
-import { ExternalLink, Code2, Palette } from 'lucide-react';
+import { ExternalLink, Code2, Palette, Calculator } from 'lucide-react';
 
 const icons = {
     Code2: Code2,
-    Palette: Palette
+    Palette: Palette,
+    Calculator: Calculator
 };
 
 const ProjectCard = ({ project }) => {
@@ -32,8 +33,8 @@ const ProjectCard = ({ project }) => {
                                 Featured Project
                             </span>
                         ) : (
-                            <span className={`bg-purple-500 text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded`}>
-                                Creative Sandbox
+                            <span className={`${project.categoryBg || 'bg-purple-500'} text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded`}>
+                                {project.category || 'Creative Sandbox'}
                             </span>
                         )}
                         <ExternalLink className={`text-stone-400 group-hover:text-white transition-colors`} size={24} />
