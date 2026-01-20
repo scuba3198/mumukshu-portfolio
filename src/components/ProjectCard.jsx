@@ -1,10 +1,11 @@
 import React from 'react';
-import { ExternalLink, Code2, Palette, Calculator } from 'lucide-react';
+import { ExternalLink, Code2, Palette, Calculator, ClipboardCheck } from 'lucide-react';
 
 const icons = {
     Code2: Code2,
     Palette: Palette,
-    Calculator: Calculator
+    Calculator: Calculator,
+    ClipboardCheck: ClipboardCheck
 };
 
 const ProjectCard = ({ project }) => {

@@ -16,6 +16,7 @@ function App() {
   // Split projects specific logic if needed, or find by ID
   const essayArchitect = projects.find(p => p.id === 'essay-architect');
   const geoflux = projects.find(p => p.id === 'geoflux');
+  const pteClassCoverage = projects.find(p => p.id === 'pte-class-coverage');
   const salaryCalculator = projects.find(p => p.id === 'salary-calculator');
 
   return (
@@ -40,6 +41,9 @@ function App() {
 
       {/* Project: GeoFlux */}
       <ProjectCard project={geoflux} />
+
+      {/* Project: PTE Class Coverage Studio */}
+      <ProjectCard project={pteClassCoverage} />
 
       {/* Project: Salary Calculator */}
       <ProjectCard project={salaryCalculator} />

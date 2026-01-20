@@ -1,4 +1,4 @@
-import { GraduationCap, Code2, Briefcase, BookOpen, Palette, Smile, MapPin, ExternalLink, Calculator } from 'lucide-react';
+import { GraduationCap, Code2, Briefcase, BookOpen, Palette, Smile, MapPin, ExternalLink, Calculator, ClipboardCheck } from 'lucide-react';
 
 export const portfolioData = {
     profile: {
@@ -46,6 +46,26 @@ export const portfolioData = {
             }
         },
         {
+            id: "pte-class-coverage",
+            title: "PTE Class Coverage Studio",
+            description: "A local-first tracker for PTE Academic class coverage. Monitor question types by module, log sessions with auto-save, manage multiple classes, and export/import JSON backups. Works fully offline after first load.",
+            tags: ["React.js", "localStorage", "Vitest"],
+            link: "https://scuba3198.github.io/pte-class-coverage/",
+            isFeatured: false,
+            category: "EdTech Tool",
+            categoryBg: "bg-blue-600",
+            iconName: "ClipboardCheck",
+            theme: {
+                bg: "bg-stone-900",
+                text: "text-white",
+                border: "border-stone-800",
+                hoverBorder: "hover:border-blue-500",
+                accent: "text-blue-400",
+                tagBg: "bg-stone-800",
+                tagText: "text-blue-400"
+            }
+        },
+        {
             id: "salary-calculator",
             title: "Nepali Salary Calculator",
             description: "A professional tool for tracking workdays and calculating monthly earnings using the native Bikram Sambat (B.S.) calendar. Features automated TDS calculation, historical data tracking, and a premium Glassmorphism-style interface.",
@@ -72,7 +92,7 @@ export const portfolioData = {
             company: "KIEC Pvt. Ltd.",
             role: "PTE Instructor",
             period: "Jun 2025 – Present",
-            description: "Currently teaching 4 hours per day across multiple batches due to exceptionally high student retention and feedback. Innovation: Conceptualized and built Essay Architect to solve the 'blank page' problem.",
+            description: "Currently teaching 4 hours per day across multiple batches due to exceptionally high student retention and feedback. Innovations: Conceptualized and built Essay Architect to solve the 'blank page' problem, and PTE Class Coverage Studio for systematic curriculum tracking.",
             color: "bg-stone-900",
             isCurrent: true
         },
