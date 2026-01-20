@@ -39,14 +39,14 @@ function App() {
       {/* Education */}
       <Education education={education} />
 
-      {/* Project: GeoFlux */}
-      <ProjectCard project={geoflux} />
+      {/* Project: Salary Calculator */}
+      <ProjectCard project={salaryCalculator} />
 
       {/* Project: PTE Class Coverage Studio */}
       <ProjectCard project={pteClassCoverage} />
 
-      {/* Project: Salary Calculator */}
-      <ProjectCard project={salaryCalculator} />
+      {/* Project: GeoFlux */}
+      <ProjectCard project={geoflux} />
 
       {/* Interests */}
       <Interests interests={interests} />
