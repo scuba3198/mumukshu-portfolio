@@ -18,6 +18,7 @@ function App() {
   const geoflux = projects.find(p => p.id === 'geoflux');
   const pteClassCoverage = projects.find(p => p.id === 'pte-class-coverage');
   const salaryCalculator = projects.find(p => p.id === 'salary-calculator');
+  const tmsCaptcha = projects.find(p => p.id === 'tms-captcha');
 
   return (
     <Layout>
@@ -47,6 +48,9 @@ function App() {
 
       {/* Project: GeoFlux */}
       <ProjectCard project={geoflux} />
+
+      {/* Project: TMS Captcha Solver */}
+      <ProjectCard project={tmsCaptcha} />
 
       {/* Interests */}
       <Interests interests={interests} />
