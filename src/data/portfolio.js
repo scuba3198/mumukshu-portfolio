@@ -1,4 +1,4 @@
-import { GraduationCap, Code2, Briefcase, BookOpen, Palette, Smile, MapPin, ExternalLink, Calculator, ClipboardCheck } from 'lucide-react';
+import { GraduationCap, Code2, Briefcase, BookOpen, Palette, Smile, MapPin, ExternalLink, Calculator, ClipboardCheck, Scan } from 'lucide-react';
 
 export const portfolioData = {
     profile: {
@@ -83,6 +83,26 @@ export const portfolioData = {
                 accent: "text-emerald-400",
                 tagBg: "bg-stone-800",
                 tagText: "text-emerald-400"
+            }
+        },
+        {
+            id: "tms-captcha",
+            title: "TMS Captcha Solver",
+            description: "A high-precision browser extension that locally solves NEPSE TMS captchas using 9-factor spatial density analysis. Features real-time character segmentation, KNN-style pattern matching, and automated input simulation with race condition prevention.",
+            tags: ["TypeScript", "Computer Vision", "Browser Extension"],
+            link: "https://github.com/scuba3198/tms-captcha",
+            isFeatured: true,
+            category: "Security & Automation",
+            categoryBg: "bg-orange-600",
+            iconName: "Scan",
+            theme: {
+                bg: "bg-stone-900",
+                text: "text-white",
+                border: "border-stone-800",
+                hoverBorder: "hover:border-orange-500",
+                accent: "text-orange-400",
+                tagBg: "bg-stone-800",
+                tagText: "text-orange-400"
             }
         }
     ],
