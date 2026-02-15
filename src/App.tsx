@@ -12,12 +12,17 @@ import { portfolioData } from './data/portfolio';
 function App(): React.JSX.Element {
   const { profile, projects, experience, stats, skills, education, interests } = portfolioData;
 
-  // Split projects specific logic if needed, or find by ID
-  const essayArchitect = projects.find(p => p.id === 'essay-architect')!;
-  const geoflux = projects.find(p => p.id === 'geoflux')!;
-  const pteClassCoverage = projects.find(p => p.id === 'pte-class-coverage')!;
-  const salaryCalculator = projects.find(p => p.id === 'salary-calculator')!;
-  const tmsCaptcha = projects.find(p => p.id === 'tms-captcha')!;
+  const getProject = (id: string) => {
+    const project = projects.find(p => p.id === id);
+    if (!project) throw new Error(`Project ${id} not found`);
+    return project;
+  };
+
+  const essayArchitect = getProject('essay-architect');
+  const geoflux = getProject('geoflux');
+  const pteClassCoverage = getProject('pte-class-coverage');
+  const salaryCalculator = getProject('salary-calculator');
+  const tmsCaptcha = getProject('tms-captcha');
 
   return (
     <Layout>

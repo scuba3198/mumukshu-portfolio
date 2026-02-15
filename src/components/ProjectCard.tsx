@@ -15,7 +15,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-    const Icon: LucideIcon = icons[project.iconName] ?? Code2;
+    const Icon: LucideIcon = icons[project.iconName];
     const { theme } = project;
 
     return (
@@ -40,8 +40,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                                 Featured Project
                             </span>
                         ) : (
-                            <span className={`${project.categoryBg || 'bg-purple-500'} text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded`}>
-                                {project.category || 'Creative Sandbox'}
+                            <span className={`${project.categoryBg ?? 'bg-purple-500'} text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded`}>
+                                {project.category ?? 'Creative Sandbox'}
                             </span>
                         )}
                         <ExternalLink className={`text-stone-400 group-hover:text-white transition-colors`} size={24} />
