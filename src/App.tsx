@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from './components/Layout';
 import Profile from './components/Profile';
 import ProjectCard from './components/ProjectCard';
@@ -10,15 +9,15 @@ import Interests from './components/Interests';
 
 import { portfolioData } from './data/portfolio';
 
-function App() {
+function App(): React.JSX.Element {
   const { profile, projects, experience, stats, skills, education, interests } = portfolioData;
 
   // Split projects specific logic if needed, or find by ID
-  const essayArchitect = projects.find(p => p.id === 'essay-architect');
-  const geoflux = projects.find(p => p.id === 'geoflux');
-  const pteClassCoverage = projects.find(p => p.id === 'pte-class-coverage');
-  const salaryCalculator = projects.find(p => p.id === 'salary-calculator');
-  const tmsCaptcha = projects.find(p => p.id === 'tms-captcha');
+  const essayArchitect = projects.find(p => p.id === 'essay-architect')!;
+  const geoflux = projects.find(p => p.id === 'geoflux')!;
+  const pteClassCoverage = projects.find(p => p.id === 'pte-class-coverage')!;
+  const salaryCalculator = projects.find(p => p.id === 'salary-calculator')!;
+  const tmsCaptcha = projects.find(p => p.id === 'tms-captcha')!;
 
   return (
     <Layout>

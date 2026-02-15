@@ -1,7 +1,8 @@
-import React from 'react';
+import type { LucideIcon } from 'lucide-react';
+import type { Project, IconName } from '../types/portfolio';
 import { ExternalLink, Code2, Palette, Calculator, ClipboardCheck, Scan } from 'lucide-react';
 
-const icons = {
+const icons: Record<IconName, LucideIcon> = {
     Code2: Code2,
     Palette: Palette,
     Calculator: Calculator,
@@ -9,8 +10,12 @@ const icons = {
     Scan: Scan
 };
 
-const ProjectCard = ({ project }) => {
-    const Icon = icons[project.iconName] || Code2;
+interface ProjectCardProps {
+    project: Project;
+}
+
+const ProjectCard = ({ project }: ProjectCardProps) => {
+    const Icon: LucideIcon = icons[project.iconName] ?? Code2;
     const { theme } = project;
 
     return (
@@ -51,7 +56,9 @@ const ProjectCard = ({ project }) => {
                 <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tags.map((tag, idx) => {
                         // Handle array of text colors for GeoFlux case or single string
-                        const textColorClass = Array.isArray(theme.tagText) ? theme.tagText[idx % theme.tagText.length] : theme.tagText;
+                        const textColorClass: string = Array.isArray(theme.tagText)
+                            ? theme.tagText[idx % theme.tagText.length]
+                            : theme.tagText;
                         return (
                             <span
                                 key={idx}

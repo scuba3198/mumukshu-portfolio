@@ -1,6 +1,11 @@
 import React from 'react';
+import type { StatItem } from '../types/portfolio';
 
-const Stats = ({ stats }) => {
+interface StatsProps {
+    stats: StatItem[];
+}
+
+const Stats = ({ stats }: StatsProps) => {
     return (
         <section className="bento-card bg-stone-50 border-stone-200" aria-label="Performance Metrics">
             <h3 className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Performance</h3>

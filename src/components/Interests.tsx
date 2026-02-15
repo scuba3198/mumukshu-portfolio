@@ -1,7 +1,11 @@
-import React from 'react';
+import type { InterestsData } from '../types/portfolio';
 import { Smile } from 'lucide-react';
 
-const Interests = ({ interests }) => {
+interface InterestsProps {
+    interests: InterestsData;
+}
+
+const Interests = ({ interests }: InterestsProps) => {
     return (
         <section className="bento-card bg-yellow-400 border-yellow-500 md:col-span-2 flex-row items-center justify-between">
             <div>

@@ -1,6 +1,10 @@
-import React from 'react';
+import type { SkillsData } from '../types/portfolio';
 
-const Skills = ({ skills }) => {
+interface SkillsProps {
+    skills: SkillsData;
+}
+
+const Skills = ({ skills }: SkillsProps) => {
     return (
         <section className="bento-card bg-white" aria-label="Skills">
             <h3 className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Skills Matrix</h3>

@@ -1,7 +1,11 @@
-import React from 'react';
+import type { EducationItem } from '../types/portfolio';
 import { BookOpen } from 'lucide-react';
 
-const Education = ({ education }) => {
+interface EducationProps {
+    education: EducationItem[];
+}
+
+const Education = ({ education }: EducationProps) => {
     return (
         <section className="bento-card bg-white md:col-span-2" aria-labelledby="edu-heading">
             <div className="flex items-center gap-3 mb-4">

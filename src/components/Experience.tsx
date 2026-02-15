@@ -1,7 +1,11 @@
-import React from 'react';
+import type { ExperienceItem } from '../types/portfolio';
 import { Briefcase } from 'lucide-react';
 
-const Experience = ({ experiences }) => {
+interface ExperienceProps {
+    experiences: ExperienceItem[];
+}
+
+const Experience = ({ experiences }: ExperienceProps) => {
     return (
         <section className="bento-card bg-white md:col-span-2 md:row-span-2" aria-labelledby="work-heading">
             <div className="flex items-center gap-3 mb-6 border-b border-stone-100 pb-4 sticky top-0 bg-white z-10">
@@ -24,7 +28,7 @@ const Experience = ({ experiences }) => {
                         <p className="text-sm font-semibold text-stone-600 mb-2">{job.role}</p>
                         {job.description.includes("Innovation:") || job.description.includes("Impact:") ? (
                             <ul className="text-sm text-stone-600 space-y-2 list-disc list-outside ml-4">
-                                {job.description.split('. ').map((sentence, idx) => {
+                                {job.description.split('. ').map((sentence: string, idx: number) => {
                                     if (!sentence) return null;
                                     // Simple parsing to identifying bullet points if they were manually structured in data or just splitting sentences
                                     // The data has clean sentences. Let's just render the description as paragraph if not list.

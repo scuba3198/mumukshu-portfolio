@@ -1,8 +1,12 @@
-import React from 'react';
+import type { ProfileData } from '../types/portfolio';
 import { GraduationCap, MapPin, Mail, Phone } from 'lucide-react';
 
-const Profile = ({ data }) => {
-    const formatPhone = (phone) => {
+interface ProfileProps {
+    data: ProfileData;
+}
+
+const Profile = ({ data }: ProfileProps) => {
+    const formatPhone = (phone: string): string => {
         const digits = String(phone || '').replace(/\D/g, '');
 
         if (digits.length === 10) {
@@ -16,7 +20,7 @@ const Profile = ({ data }) => {
         return phone;
     };
 
-    const formatPhoneHref = (phone) => {
+    const formatPhoneHref = (phone: string): string => {
         const digits = String(phone || '').replace(/\D/g, '');
 
         if (digits.length === 10) {

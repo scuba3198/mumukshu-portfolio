@@ -13,15 +13,15 @@ This portfolio showcases my professional journey, featured projects, and technic
 
 ## 🚀 Features
 
-- **Modern Stack**: Built with React 18, Vite, and Tailwind CSS v3.
+- **Modern Stack**: Built with React 19, TypeScript, Vite, and Tailwind CSS v3.
 - **Componentized Design**: Modular structure with reusable components (`ProjectCard`, `Experience`, `Stats`, etc.).
-- **Dynamic Content**: Data-driven UI where all portfolio content is managed via a single `src/data/portfolio.js` file.
+- **Strict Data Control**: TypeScript-driven UI where all portfolio content is strictly typed via `src/types/portfolio.ts` and managed in `src/data/portfolio.ts`.
 - **Responsive Layout**: Fully responsive Bento-grid design inspired by modern aesthetics.
 - **Performance Optimized**: Lazy loading (where applicable) and optimized build size using Vite.
 
 ## 🛠️ Tech Stack
 
-- **Core**: [React](https://react.dev/)
+- **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
@@ -30,15 +30,17 @@ This portfolio showcases my professional journey, featured projects, and technic
 
 ```bash
 src/
-├── components/       # Reusable UI components
-│   ├── Layout.jsx    # Main page wrapper
-│   ├── Profile.jsx   # Hero/Profile section
-│   ├── Experience.jsx # Work history list
+├── components/       # Reusable UI components (.tsx)
+│   ├── Layout.tsx    # Main page wrapper
+│   ├── Profile.tsx   # Hero/Profile section
+│   ├── Experience.tsx # Work history list
 │   └── ...           # Other sections (Skills, Education, etc.)
 ├── data/
-│   └── portfolio.js  # 📝 EDIT THIS FILE to update your resume content
-├── App.jsx           # Main application entry
-└── main.jsx          # React DOM root
+│   └── portfolio.ts  # 📝 EDIT THIS FILE to update your resume content
+├── types/
+│   └── portfolio.ts  # Type definitions and interfaces
+├── App.tsx           # Main application entry
+└── main.tsx          # React DOM root
 ```
 
 ## 📦 Getting Started
@@ -62,7 +64,7 @@ src/
 
 4.  **Build for Production**
     ```bash
-    npm run build
+    npm run build     # Runs type-check (tsc) then vite build
     ```
 
 ## 🎨 Design Philosophy

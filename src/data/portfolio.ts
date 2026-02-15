@@ -1,6 +1,6 @@
-import { GraduationCap, Code2, Briefcase, BookOpen, Palette, Smile, MapPin, ExternalLink, Calculator, ClipboardCheck, Scan } from 'lucide-react';
+import type { PortfolioData } from '../types/portfolio';
 
-export const portfolioData = {
+export const portfolioData: PortfolioData = {
     profile: {
         name: "Mumukshu D.C.",
         title: "PTE Instructor & EdTech Developer",
