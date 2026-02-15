@@ -1,6 +1,7 @@
 # Mumukshu D.C. | Portfolio
 
 ![React](https://img.shields.io/badge/-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
@@ -9,7 +10,7 @@
 
 > **PTE Instructor & EdTech Developer** specializing in English proficiency coaching and modern web development.
 
-This portfolio showcases my professional journey, featured projects, and technical skills. It has been reimagined as a modern **React application**, moving away from static HTML to a scalable component-based architecture.
+This portfolio showcases my professional journey, featured projects, and technical skills. It has been reimagined as a modern **React & TypeScript application**, moving away from static HTML to a scalable component-based architecture.
 
 ## 🚀 Features
 
