@@ -1,42 +1,37 @@
 {
-  "name": "mumukshu-portfolio",
-  "description": "A scalable React portfolio featuring a modern Bento Grid layout, built with Vite, Tailwind CSS, and component-based architecture.",
-  "private": true,
-  "version": "0.0.0",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
-  },
-  "homepage": "https://scuba3198.github.io/mumukshu-portfolio/",
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.562.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "tailwind-merge": "^3.4.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.55.0",
-    "@typescript-eslint/parser": "^8.55.0",
-    "@vitejs/plugin-react": "^5.1.1",
-    "autoprefixer": "^10.4.23",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
-    "tslib": "^2.8.1",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.55.0",
-    "vite": "^7.2.4"
-  }
+	"name": "mumukshu-portfolio",
+	"description": "A scalable React portfolio featuring a modern Bento Grid layout, built with Vite, Tailwind CSS, and component-based architecture.",
+	"private": true,
+	"version": "0.0.0",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "npm run typecheck && npm run lint && vite build",
+		"lint": "biome check .",
+		"format": "biome format . --write",
+		"preview": "vite preview",
+		"typecheck": "tsc --noEmit"
+	},
+	"homepage": "https://scuba3198.github.io/mumukshu-portfolio/",
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.562.0",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
+		"tailwind-merge": "^3.4.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.0",
+		"@tsconfig/strictest": "^2.0.8",
+		"@types/react": "^19.2.5",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^5.1.1",
+		"autoprefixer": "^10.4.23",
+		"postcss": "^8.5.6",
+		"tailwindcss": "^3.4.17",
+		"tslib": "^2.8.1",
+		"typescript": "^5.9.3",
+		"vite": "^7.2.4"
+	}
 }
