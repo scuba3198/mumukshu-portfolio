@@ -4,6 +4,7 @@
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Biome](https://img.shields.io/badge/-Biome-60A5FA?style=for-the-badge&logo=biome&logoColor=white)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-2ea44f?style=for-the-badge&logo=github)](https://scuba3198.github.io/mumukshu-portfolio/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -15,15 +16,18 @@ This portfolio showcases my professional journey, featured projects, and technic
 ## 🚀 Features
 
 - **Modern Stack**: Built with React 19, TypeScript, Vite, and Tailwind CSS v3.
+- **Strict Linting & Formatting**: Powered by [Biome](https://biomejs.dev/) for high-performance code quality checks.
+- **Strict Type Safety**: Extended with `@tsconfig/strictest` to ensure maximum robustness.
 - **Componentized Design**: Modular structure with reusable components (`ProjectCard`, `Experience`, `Stats`, etc.).
 - **Strict Data Control**: TypeScript-driven UI where all portfolio content is strictly typed via `src/types/portfolio.ts` and managed in `src/data/portfolio.ts`.
 - **Responsive Layout**: Fully responsive Bento-grid design inspired by modern aesthetics.
-- **Performance Optimized**: Lazy loading (where applicable) and optimized build size using Vite.
+- **Accessibility**: Built with accessibility in mind (WCAG 4.1.2 compliant).
 
 ## 🛠️ Tech Stack
 
-- **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (`@tsconfig/strictest`)
 - **Build Tool**: [Vite](https://vitejs.dev/)
+- **Linting & Formatting**: [Biome](https://biomejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 
@@ -63,7 +67,13 @@ src/
     ```
     Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-4.  **Build for Production**
+4.  **Lint & Format**
+    ```bash
+    npm run lint      # Runs Biome check
+    npm run format    # Runs Biome format --write
+    ```
+
+5.  **Build for Production**
     ```bash
     npm run build     # Runs type-check (tsc) then vite build
     ```
