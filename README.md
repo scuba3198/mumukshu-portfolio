@@ -17,7 +17,7 @@ This portfolio showcases my professional journey, featured projects, and technic
 ## 🚀 Features
 
 - **Modern Stack**: Built with React 19, TypeScript, Vite, and Tailwind CSS v3.
-- **Strict Linting & Formatting**: Powered by [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for ultra-fast linting and [Prettier](https://prettier.io/) for consistent formatting.
+- **Strict Linting & Formatting**: Powered by [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for ultra-fast linting and [Prettier](https://prettier.io/) (enhanced with `@prettier/plugin-oxc`) for high-performance formatting.
 - **Strict Type Safety**: Extended with `@tsconfig/strictest` to ensure maximum robustness.
 - **Componentized Design**: Modular structure with reusable components (`ProjectCard`, `Experience`, `Stats`, etc.).
 - **Strict Data Control**: TypeScript-driven UI where all portfolio content is strictly typed via `src/types/portfolio.ts` and managed in `src/data/portfolio.ts`.
