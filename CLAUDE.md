@@ -17,8 +17,11 @@ npm run build
 # Preview production build locally
 npm run preview
 
-# Run ESLint
+# Run Oxlint (linter)
 npm run lint
+
+# Run Prettier (formatter)
+npm run format
 ```
 
 ## Architecture Overview
@@ -36,6 +39,7 @@ All portfolio content is defined in `src/data/portfolio.ts`. Components are pure
 ### Bento Grid Layout
 
 The app uses a CSS Grid-based Bento layout defined in `Layout.tsx`:
+
 - Main container: `grid-cols-1 md:grid-cols-4` (4 columns on desktop)
 - Components span varying column widths using `md:col-span-X` classes
 - Responsive: single column on mobile, 4-column grid on desktop
@@ -43,11 +47,13 @@ The app uses a CSS Grid-based Bento layout defined in `Layout.tsx`:
 ### Component Architecture
 
 **Layout Components:**
+
 - `Layout.tsx` - Main wrapper with grid container, centers content with max-width
 - Individual section components (`Profile`, `Experience`, `Stats`, `Skills`, `Education`, `Interests`) - Presentational, receive typed props
 
 **ProjectCard Component:**
 Key features:
+
 - Dynamic icon mapping via `icons` object (Record<IconName, LucideIcon>)
 - Theme-based styling: each project has a `theme` object with Tailwind classes
 - Special handling for array-based tag colors (multi-color tags)
@@ -56,6 +62,7 @@ Key features:
 ### Data Structure
 
 Defined in `src/types/portfolio.ts` and implemented in `portfolio.ts`:
+
 ```typescript
 {
   id: string,
@@ -100,5 +107,7 @@ Defined in `src/types/portfolio.ts` and implemented in `portfolio.ts`:
 
 - React 19 + TypeScript (Strict Mode)
 - `tsc --noEmit` used for type checking
+- `oxlint` used for fast linting
+- `prettier` used for formatting
 - No state management—static content only
 - Components are functionally stateless
