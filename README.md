@@ -22,8 +22,7 @@ This portfolio showcases my professional journey, featured projects, and technic
 - **Micro-interactions**: Refined hover states, rotating icons, dynamic link translations, and pulsing glowing indicators for current roles.
 - **Modern Stack**: Built with React 19, TypeScript, Vite, and Tailwind CSS v3.
 - **Strict Linting & Formatting**: Powered by [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for ultra-fast linting and [Prettier](https://prettier.io/) for high-performance formatting.
-- **Strict Type Safety**: Extended with `@tsconfig/strictest` plus **Zod** for runtime schema validation of portfolio data.
-- **Structured Logging**: Implementation of **Pino** for machine-readable, structured logs.
+- **Strict Type Safety**: Extended with `@tsconfig/strictest` for maximum compile-time safety and data integrity.
 - **Dependency Boundaries**: Enforced via **dependency-cruiser** to prevent circular dependencies and maintain clean architecture.
 - **Componentized Design**: Modular structure with reusable components (`ProjectCard`, `Experience`, `Stats`, etc.).
 - **Responsive Layout**: Fully responsive Bento-grid design inspired by premium tech portfolios.
@@ -31,8 +30,7 @@ This portfolio showcases my professional journey, featured projects, and technic
 ## 🛠️ Tech Stack
 
 - **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (`@tsconfig/strictest`)
-- **Validation**: [Zod](https://zod.dev/) (Runtime schema parsing)
-- **Logging**: [Pino](https://getpino.io/) (Structured logging)
+- **Validation**: [Zod](https://zod.dev/) (Build-time schema definitions)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Custom Premium Theme)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
@@ -51,7 +49,7 @@ src/
 ├── schemas/
 │   └── portfolio.ts  # Zod schemas for runtime validation
 ├── utils/
-│   └── logger.ts     # Centralized Pino logger instance
+│   └── logger.ts     # Centralized lightweight logger wrapper
 ├── types/
 │   └── portfolio.ts  # Type definitions and interfaces
 ├── App.tsx           # Main application entry

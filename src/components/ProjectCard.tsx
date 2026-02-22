@@ -27,7 +27,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
 	return (
 		<article
-			className={`bento-card md:col-span-2 cursor-pointer border-stone-200 dark:border-white/5 hover:border-stone-300 dark:hover:border-white/20 group relative overflow-hidden`}
+			className="bento-card md:col-span-2 cursor-pointer border-stone-200 dark:border-white/5 hover:border-stone-300 dark:hover:border-white/20 group relative overflow-hidden"
 		>
 			<a
 				href={project.link}
@@ -53,7 +53,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 							</span>
 						) : (
 							<span
-								className={`${project.categoryBg?.replace('bg-', 'text-').replace('-600', '-600 dark:text-').replace('-500', '-500 dark:text-') || "text-purple-600 dark:text-purple-400"} bg-stone-900/5 dark:bg-white/5 border border-stone-200 dark:border-white/10 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-md transition-colors`}
+								className={`${project.categoryText || "text-purple-600 dark:text-purple-400"} bg-stone-900/5 dark:bg-white/5 border border-stone-200 dark:border-white/10 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-md transition-colors`}
 							>
 								{project.category ?? "Sandbox"}
 							</span>
@@ -64,7 +64,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 						/>
 					</div>
 					<h2
-						className={`text-2xl font-bold mb-3 ${theme.accent ? `group-hover:${theme.accent.replace('400', '600 dark:group-hover:text-400')}` : "group-hover:text-stone-900 dark:group-hover:text-white"} transition-colors text-stone-800 dark:text-stone-200`}
+						className={`text-2xl font-bold mb-3 transition-colors text-stone-800 dark:text-stone-200 group-hover:text-stone-900 dark:group-hover:text-white`}
 					>
 						{project.title}
 					</h2>
@@ -77,7 +77,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 						const textColor = Array.isArray(theme.tagText)
 							? theme.tagText[idx % theme.tagText.length]
 							: theme.tagText;
-						const textColorClass = textColor ? textColor.replace('400', '600 dark:text-400') : "text-stone-700 dark:text-stone-300";
+
+						// Fallback to a default if not specified, making sure it's a valid static class
+						const textColorClass = textColor ? textColor : "text-stone-700 dark:text-stone-300";
+
 						return (
 							<span
 								key={tag}

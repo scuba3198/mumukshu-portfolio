@@ -30,16 +30,22 @@ export const projectSchema = z.object({
     iconName: iconNameSchema,
     category: z.string().optional(),
     categoryBg: z.string().optional(),
+    categoryText: z.string().optional(),
     theme: projectThemeSchema,
 });
 
 // ── Experience ──
+export const experienceHighlightSchema = z.object({
+    type: z.enum(["innovation", "impact", "general"]),
+    text: z.string(),
+});
+
 export const experienceItemSchema = z.object({
     id: z.number(),
     company: z.string(),
     role: z.string(),
     period: z.string(),
-    description: z.string(),
+    highlights: z.array(experienceHighlightSchema),
     color: z.string(),
     isCurrent: z.boolean(),
 });

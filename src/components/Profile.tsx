@@ -14,24 +14,16 @@ const Profile = ({ data }: ProfileProps) => {
 		}
 
 		if (digits.length === 12 && digits.startsWith("977")) {
-			return `+977 ${digits.slice(3, 6)}-${digits.slice(6, 9)}-${digits.slice(9)}`;
+			return `+${digits.slice(0, 3)} ${digits.slice(3, 6)}-${digits.slice(6, 9)}-${digits.slice(9)}`;
 		}
 
-		return phone;
+		// Fallback for other lengths (e.g. international)
+		return phone.startsWith("+") ? phone : `+${phone}`;
 	};
 
 	const formatPhoneHref = (phone: string): string => {
 		const digits = phone.replace(/\D/g, "");
-
-		if (digits.length === 10) {
-			return `+977${digits}`;
-		}
-
-		if (digits.length === 12 && digits.startsWith("977")) {
-			return `+${digits}`;
-		}
-
-		return digits || phone || "";
+		return phone.startsWith("+") ? `tel:${phone}` : `tel:+${digits}`;
 	};
 
 	return (
