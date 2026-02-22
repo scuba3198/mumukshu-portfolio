@@ -6,18 +6,18 @@ interface SkillsProps {
 
 const Skills = ({ skills }: SkillsProps) => {
 	return (
-		<section className="bento-card bg-white" aria-label="Skills">
-			<h3 className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">
+		<section className="bento-card group" aria-label="Skills">
+			<h3 className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-6 transition-colors">
 				Skills Matrix
 			</h3>
-			<div className="space-y-4">
+			<div className="space-y-6">
 				<div>
-					<p className="text-xs font-bold text-stone-900 mb-2">Pedagogical</p>
-					<div className="flex flex-wrap gap-2">
+					<p className="text-sm font-bold text-stone-800 dark:text-stone-300 mb-3 transition-colors">Pedagogical</p>
+					<div className="flex flex-wrap gap-2.5">
 						{skills.pedagogical.map((skill) => (
 							<span
 								key={skill}
-								className="tag bg-white border border-stone-200 text-stone-600"
+								className="tag"
 							>
 								{skill}
 							</span>
@@ -25,10 +25,10 @@ const Skills = ({ skills }: SkillsProps) => {
 					</div>
 				</div>
 				<div>
-					<p className="text-xs font-bold text-stone-900 mb-2">Technical</p>
-					<div className="flex flex-wrap gap-2">
+					<p className="text-sm font-bold text-stone-800 dark:text-stone-300 mb-3 transition-colors">Technical</p>
+					<div className="flex flex-wrap gap-2.5">
 						{skills.technical.map((skill) => (
-							<span key={skill} className="tag bg-stone-100 text-stone-800">
+							<span key={skill} className="tag">
 								{skill}
 							</span>
 						))}
