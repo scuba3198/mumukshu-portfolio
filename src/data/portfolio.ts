@@ -1,6 +1,8 @@
 import type { PortfolioData } from "../types/portfolio";
+import { portfolioDataSchema } from "../schemas/portfolio";
+import { logger } from "../utils/logger";
 
-export const portfolioData: PortfolioData = {
+const rawPortfolioData: PortfolioData = {
 	profile: {
 		name: "Mumukshu D.C.",
 		title: "PTE Instructor & EdTech Developer",
@@ -197,3 +199,6 @@ export const portfolioData: PortfolioData = {
 		list: "Stock Market Analysis • Video Games • Cinema",
 	},
 };
+
+export const portfolioData: PortfolioData = portfolioDataSchema.parse(rawPortfolioData) as PortfolioData;
+logger.info("Portfolio data validated successfully");
