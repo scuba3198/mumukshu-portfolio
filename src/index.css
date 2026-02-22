@@ -1,26 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
 	.bento-card {
-		@apply rounded-3xl p-6 border border-stone-200 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-stone-300 hover:-translate-y-0.5 relative overflow-hidden;
+		@apply rounded-3xl p-6 md:p-8 bg-white/40 dark:bg-white/[0.02] border border-stone-200 dark:border-white/[0.05] backdrop-blur-3xl transition-all duration-500 ease-out flex flex-col relative overflow-hidden;
+		/* Premium inner shadow and subtle glow */
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+			0 4px 20px -8px rgba(0, 0, 0, 0.05);
 	}
+
+	html.dark .bento-card {
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+			0 8px 32px -8px rgba(0, 0, 0, 0.3);
+	}
+
+	.bento-card:hover {
+		@apply bg-white/60 dark:bg-white/[0.04] border-stone-300 dark:border-white/[0.1] -translate-y-1;
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.8),
+			0 12px 32px -12px rgba(0, 0, 0, 0.1),
+			0 0 30px -10px rgba(0, 0, 0, 0.05);
+	}
+
+	html.dark .bento-card:hover {
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+			0 16px 48px -12px rgba(0, 0, 0, 0.5),
+			0 0 40px -10px rgba(255, 255, 255, 0.05);
+		/* Subtle ambient glow */
+	}
+
 	.tag {
-		@apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+		@apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-stone-100/80 dark:bg-white/[0.03] border border-stone-200 dark:border-white/[0.05] text-stone-600 dark:text-stone-300 backdrop-blur-md transition-colors hover:bg-stone-200 dark:hover:bg-white/[0.08] hover:text-stone-900 dark:hover:text-white;
+	}
+
+	.text-gradient {
+		@apply bg-clip-text text-transparent bg-gradient-to-br from-stone-800 via-stone-700 to-stone-500 dark:from-white dark:via-white/90 dark:to-white/40;
 	}
 }
 
-/* Custom Scrollbar */
-.custom-scrollbar::-webkit-scrollbar {
-	width: 4px;
+/* Base style resets */
+body {
+	/* Transitions handled in HTML body class for smooth mode switch */
 }
-.custom-scrollbar::-webkit-scrollbar-track {
-	background: #f5f5f4;
+
+/* Custom Scrollbar - Sleek Dark/Light Mode */
+::-webkit-scrollbar {
+	width: 6px;
 }
-.custom-scrollbar::-webkit-scrollbar-thumb {
-	background-color: #d6d3d1;
-	border-radius: 20px;
+
+::-webkit-scrollbar-track {
+	@apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-stone-300 dark:bg-[#222] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-stone-400 dark:bg-[#333];
 }

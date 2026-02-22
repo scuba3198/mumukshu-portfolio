@@ -1,18 +1,30 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/mumukshu-portfolio/favicon.svg"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Mumukshu D.C. | Portfolio</title>
-	</head>
 
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/main.tsx"></script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/mumukshu-portfolio/favicon.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mumukshu D.C. | Portfolio</title>
+	<script>
+		// Initialize theme before React to prevent hydration flash
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet">
+</head>
+
+<body
+	class="antialiased selection:bg-purple-500/20 selection:text-purple-900 dark:selection:bg-white/20 dark:selection:text-white transition-colors duration-500 bg-stone-50 text-stone-900 dark:bg-[#050505] dark:text-[#e5e5e5]">
+	<div id="root"></div>
+	<script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

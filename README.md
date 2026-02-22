@@ -16,31 +16,34 @@ This portfolio showcases my professional journey, featured projects, and technic
 
 ## 🚀 Features
 
+- **Premium UI/UX**: Reimagined with a state-of-the-art "Premium Deep Dark" aesthetic and high-end glassmorphism.
+- **Dual Theme Support**: Native Light/Dark mode switcher with automatic system preference detection and zero-flash initialization.
+- **Ambient Lighting**: CSS-animated background glowing orbs that react to the current theme.
+- **Micro-interactions**: Refined hover states, rotating icons, dynamic link translations, and pulsing glowing indicators for current roles.
 - **Modern Stack**: Built with React 19, TypeScript, Vite, and Tailwind CSS v3.
-- **Strict Linting & Formatting**: Powered by [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for ultra-fast linting and [Prettier](https://prettier.io/) (enhanced with `@prettier/plugin-oxc`) for high-performance formatting.
+- **Strict Linting & Formatting**: Powered by [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for ultra-fast linting and [Prettier](https://prettier.io/) for high-performance formatting.
 - **Strict Type Safety**: Extended with `@tsconfig/strictest` to ensure maximum robustness.
 - **Componentized Design**: Modular structure with reusable components (`ProjectCard`, `Experience`, `Stats`, etc.).
-- **Strict Data Control**: TypeScript-driven UI where all portfolio content is strictly typed via `src/types/portfolio.ts` and managed in `src/data/portfolio.ts`.
-- **Responsive Layout**: Fully responsive Bento-grid design inspired by modern aesthetics.
-- **Accessibility**: Built with accessibility in mind (WCAG 4.1.2 compliant).
+- **Responsive Layout**: Fully responsive Bento-grid design inspired by premium tech portfolios.
 
 ## 🛠️ Tech Stack
 
 - **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (`@tsconfig/strictest`)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Custom Premium Theme)
+- **Icons**: [Lucide React](https://lucide.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Linting & Formatting**: [Oxlint](https://oxc.rs/) + [Prettier](https://prettier.io/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
 
 ## 📂 Project Structure
 
 ```bash
 src/
 ├── components/       # Reusable UI components (.tsx)
-│   ├── Layout.tsx    # Main page wrapper
-│   ├── Profile.tsx   # Hero/Profile section
-│   ├── Experience.tsx # Work history list
-│   └── ...           # Other sections (Skills, Education, etc.)
+│   ├── Layout.tsx    # Main page wrapper with ambient effects
+│   ├── ThemeToggle.tsx # Light/Dark mode switcher
+│   ├── Profile.tsx   # Hero/Profile section with gradient text
+│   ├── Experience.tsx # Work history timeline
+│   └── ...           # Other redesigned bento-grid components
 ├── data/
 │   └── portfolio.ts  # 📝 EDIT THIS FILE to update your resume content
 ├── types/
