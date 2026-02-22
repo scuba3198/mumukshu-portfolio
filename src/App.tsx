@@ -13,28 +13,18 @@ function App(): React.JSX.Element {
 	const { profile, projects, experience, stats, skills, education, interests } =
 		portfolioData;
 
-	const getProject = (id: string) => {
-		const project = projects.find((p) => p.id === id);
-		if (!project) throw new Error(`Project ${id} not found`);
-		return project;
-	};
-
-	const essayArchitect = getProject("essay-architect");
-	const geoflux = getProject("geoflux");
-	const pteClassCoverage = getProject("pte-class-coverage");
-	const salaryCalculator = getProject("salary-calculator");
-	const tmsCaptcha = getProject("tms-captcha");
-
 	return (
 		<Layout>
 			{/* Profile Section */}
 			<Profile data={profile} />
 
-			{/* Featured Project: Essay Architect */}
-			<ProjectCard project={essayArchitect} />
-
 			{/* Work Experience */}
 			<Experience experiences={experience} />
+
+			{/* Projects - Render all dynamically */}
+			{projects.map((project) => (
+				<ProjectCard key={project.id} project={project} />
+			))}
 
 			{/* Performance Stats */}
 			<Stats stats={stats} />
@@ -44,18 +34,6 @@ function App(): React.JSX.Element {
 
 			{/* Education */}
 			<Education education={education} />
-
-			{/* Project: Salary Calculator */}
-			<ProjectCard project={salaryCalculator} />
-
-			{/* Project: PTE Class Coverage Studio */}
-			<ProjectCard project={pteClassCoverage} />
-
-			{/* Project: GeoFlux */}
-			<ProjectCard project={geoflux} />
-
-			{/* Project: TMS Captcha Solver */}
-			<ProjectCard project={tmsCaptcha} />
 
 			{/* Interests */}
 			<Interests interests={interests} />

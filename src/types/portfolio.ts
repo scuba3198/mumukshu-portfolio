@@ -33,16 +33,22 @@ export interface Project {
 	iconName: IconName;
 	category?: string; // optional — defaults to "Creative Sandbox"
 	categoryBg?: string; // optional — defaults to bg-purple-500
+	categoryText?: string; // optional — defaults to text-purple-600
 	theme: ProjectTheme;
 }
 
 // ── Experience ──
+export interface ExperienceHighlight {
+	type: "innovation" | "impact" | "general";
+	text: string;
+}
+
 export interface ExperienceItem {
 	id: number;
 	company: string;
 	role: string;
 	period: string;
-	description: string;
+	highlights: ExperienceHighlight[];
 	color: string;
 	isCurrent: boolean;
 }

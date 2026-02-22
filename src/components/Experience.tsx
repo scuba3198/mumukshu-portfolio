@@ -40,36 +40,25 @@ const Experience = ({ experiences }: ExperienceProps) => {
 						<p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-3 transition-colors">
 							{job.role}
 						</p>
-						{job.description.includes("Innovation:") ||
-							job.description.includes("Impact:") ? (
-							<ul className="text-sm text-stone-600 dark:text-stone-400 space-y-2 list-disc list-outside ml-4 group-hover/item:text-stone-800 dark:group-hover/item:text-stone-300 transition-colors">
-								{job.description.split(". ").map((sentence: string) => {
-									if (!sentence) return null;
-									const hasInnovation = sentence.includes("Innovation:");
-									const hasImpact = sentence.includes("Impact:");
-
-									return (
-										<li key={sentence}>
-											{hasInnovation ? (
-												<>
-													<strong className="text-emerald-600 dark:text-emerald-400 font-medium transition-colors">Innovation:</strong>
-													{sentence.replace("Innovation:", "")}
-												</>
-											) : hasImpact ? (
-												<>
-													<strong className="text-purple-600 dark:text-purple-400 font-medium transition-colors">Impact:</strong>
-													{sentence.replace("Impact:", "")}
-												</>
-											) : (
-												sentence
-											)}
-										</li>
-									);
-								})}
-							</ul>
-						) : (
-							<p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed font-medium group-hover/item:text-stone-800 dark:group-hover/item:text-stone-300 transition-colors">{job.description}</p>
-						)}
+						<ul className="text-sm text-stone-600 dark:text-stone-400 space-y-2 list-disc list-outside ml-4 group-hover/item:text-stone-800 dark:group-hover/item:text-stone-300 transition-colors">
+							{job.highlights.map((highlight, idx) => (
+								<li key={idx}>
+									{highlight.type === "innovation" ? (
+										<>
+											<strong className="text-emerald-600 dark:text-emerald-400 font-medium transition-colors">Innovation:</strong>{" "}
+											{highlight.text}
+										</>
+									) : highlight.type === "impact" ? (
+										<>
+											<strong className="text-purple-600 dark:text-purple-400 font-medium transition-colors">Impact:</strong>{" "}
+											{highlight.text}
+										</>
+									) : (
+										highlight.text
+									)}
+								</li>
+							))}
+						</ul>
 					</article>
 				))}
 			</div>
