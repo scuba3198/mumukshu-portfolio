@@ -1,11 +1,15 @@
-import { GraduationCap, Mail, MapPin, Phone } from "lucide-react";
+import { GraduationCap, Mail, MapPin, Phone, Eye, EyeOff } from "lucide-react";
 import type { ProfileData } from "../types/portfolio";
+import { useState } from "react";
 
 interface ProfileProps {
 	data: ProfileData;
 }
 
 const Profile = ({ data }: ProfileProps) => {
+	const [showPhone, setShowPhone] = useState(false);
+	const [showEmail, setShowEmail] = useState(false);
+
 	const formatPhone = (phone: string): string => {
 		const digits = phone.replace(/\D/g, "");
 
@@ -24,6 +28,25 @@ const Profile = ({ data }: ProfileProps) => {
 	const formatPhoneHref = (phone: string): string => {
 		const digits = phone.replace(/\D/g, "");
 		return phone.startsWith("+") ? `tel:${phone}` : `tel:+${digits}`;
+	};
+
+	const maskPhone = (phone: string): string => {
+		const formatted = formatPhone(phone);
+		const parts = formatted.split(" ");
+		const lastPart = parts[parts.length - 1];
+		const prefix = parts.slice(0, parts.length - 1).join(" ");
+
+		// Mask the middle section of the last part
+		const masked = lastPart.length > 6
+			? `${lastPart.slice(0, 3)}••••${lastPart.slice(-3)}`
+			: "••••••••";
+
+		return prefix ? `${prefix} ${masked}` : masked;
+	};
+
+	const maskEmail = (email: string): string => {
+		const [user, domain] = email.split("@");
+		return `${user.slice(0, 2)}••••@${domain}`;
 	};
 
 	return (
@@ -47,18 +70,44 @@ const Profile = ({ data }: ProfileProps) => {
 					<span className="flex items-center gap-2.5 text-stone-600 dark:text-stone-300/80 hover:text-stone-900 dark:hover:text-white transition-colors">
 						<MapPin size={18} className="text-stone-400 dark:text-stone-400 transition-colors" /> {data.location}
 					</span>
-					<a
-						className="flex items-center gap-2.5 text-stone-600 dark:text-stone-300/80 hover:text-stone-900 dark:hover:text-white transition-colors"
-						href={`tel:${formatPhoneHref(data.phone)}`}
+					<button
+						onClick={() => setShowPhone(!showPhone)}
+						className="flex items-center gap-2.5 text-stone-600 dark:text-stone-300/80 hover:text-stone-900 dark:hover:text-white transition-colors group/contact"
+						title={showPhone ? "Hide Phone" : "Reveal Phone"}
 					>
-						<Phone size={18} className="text-stone-400 dark:text-stone-400 transition-colors" /> {formatPhone(data.phone)}
-					</a>
-					<a
-						className="flex items-center gap-2.5 text-stone-600 dark:text-stone-300/80 hover:text-stone-900 dark:hover:text-white transition-colors"
-						href={`mailto:${data.email}`}
+						<Phone size={18} className="text-stone-400 dark:text-stone-400 transition-colors" />
+						<span className="font-mono">{showPhone ? formatPhone(data.phone) : maskPhone(data.phone)}</span>
+						{showPhone ? <EyeOff size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" /> : <Eye size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" />}
+						{showPhone && (
+							<a
+								href={`tel:${formatPhoneHref(data.phone)}`}
+								className="ml-1 p-1 hover:bg-stone-200 dark:hover:bg-white/10 rounded-md transition-colors"
+								onClick={(e) => e.stopPropagation()}
+								aria-label="Call"
+							>
+								<Phone size={14} className="text-emerald-500" />
+							</a>
+						)}
+					</button>
+					<button
+						onClick={() => setShowEmail(!showEmail)}
+						className="flex items-center gap-2.5 text-stone-600 dark:text-stone-300/80 hover:text-stone-900 dark:hover:text-white transition-colors group/contact"
+						title={showEmail ? "Hide Email" : "Reveal Email"}
 					>
-						<Mail size={18} className="text-stone-400 dark:text-stone-400 transition-colors" /> {data.email}
-					</a>
+						<Mail size={18} className="text-stone-400 dark:text-stone-400 transition-colors" />
+						<span className="font-mono">{showEmail ? data.email : maskEmail(data.email)}</span>
+						{showEmail ? <EyeOff size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" /> : <Eye size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" />}
+						{showEmail && (
+							<a
+								href={`mailto:${data.email}`}
+								className="ml-1 p-1 hover:bg-stone-200 dark:hover:bg-white/10 rounded-md transition-colors"
+								onClick={(e) => e.stopPropagation()}
+								aria-label="Email"
+							>
+								<Mail size={14} className="text-emerald-500" />
+							</a>
+						)}
+					</button>
 				</address>
 			</div>
 		</section>
