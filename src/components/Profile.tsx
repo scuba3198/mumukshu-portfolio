@@ -27,7 +27,10 @@ const Profile = ({ data }: ProfileProps) => {
 
 	const formatPhoneHref = (phone: string): string => {
 		const digits = phone.replace(/\D/g, "");
-		return phone.startsWith("+") ? `tel:${phone}` : `tel:+${digits}`;
+		if (digits.length === 10) {
+			return `tel:+977${digits}`;
+		}
+		return phone.startsWith("+") ? `tel:${phone.replace(/\s/g, "")}` : `tel:+${digits}`;
 	};
 
 	const maskPhone = (phone: string): string => {
@@ -84,7 +87,7 @@ const Profile = ({ data }: ProfileProps) => {
 						{showPhone ? <EyeOff size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" /> : <Eye size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" />}
 						{showPhone && (
 							<a
-								href={`tel:${formatPhoneHref(data.phone)}`}
+								href={formatPhoneHref(data.phone)}
 								className="ml-1 p-1 hover:bg-stone-200 dark:hover:bg-white/10 rounded-md transition-colors"
 								onClick={(e) => e.stopPropagation()}
 								aria-label="Call"
