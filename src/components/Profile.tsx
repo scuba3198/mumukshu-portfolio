@@ -34,6 +34,9 @@ const Profile = ({ data }: ProfileProps) => {
 		const formatted = formatPhone(phone);
 		const parts = formatted.split(" ");
 		const lastPart = parts[parts.length - 1];
+
+		if (!lastPart) return "••••••••";
+
 		const prefix = parts.slice(0, parts.length - 1).join(" ");
 
 		// Mask the middle section of the last part
@@ -46,6 +49,7 @@ const Profile = ({ data }: ProfileProps) => {
 
 	const maskEmail = (email: string): string => {
 		const [user, domain] = email.split("@");
+		if (!user || !domain) return "••••@••••";
 		return `${user.slice(0, 2)}••••@${domain}`;
 	};
 
