@@ -84,7 +84,7 @@ const Profile = ({ data }: ProfileProps) => {
 					>
 						<Phone size={18} className="text-stone-400 dark:text-stone-400 transition-colors" />
 						<span className="font-mono">{showPhone ? formatPhone(data.phone) : maskPhone(data.phone)}</span>
-						{showPhone ? <EyeOff size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" /> : <Eye size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" />}
+						{showPhone ? <EyeOff size={14} className="opacity-40 transition-opacity" /> : <Eye size={14} className="opacity-40 transition-opacity" />}
 						{showPhone && (
 							<a
 								href={formatPhoneHref(data.phone)}
@@ -103,7 +103,7 @@ const Profile = ({ data }: ProfileProps) => {
 					>
 						<Mail size={18} className="text-stone-400 dark:text-stone-400 transition-colors" />
 						<span className="font-mono">{showEmail ? data.email : maskEmail(data.email)}</span>
-						{showEmail ? <EyeOff size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" /> : <Eye size={14} className="opacity-0 group-hover/contact:opacity-50 transition-opacity" />}
+						{showEmail ? <EyeOff size={14} className="opacity-40 transition-opacity" /> : <Eye size={14} className="opacity-40 transition-opacity" />}
 						{showEmail && (
 							<a
 								href={`mailto:${data.email}`}
