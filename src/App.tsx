@@ -1,43 +1,41 @@
-import Education from "./components/Education";
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 import Experience from "./components/Experience";
-import Interests from "./components/Interests";
-import Layout from "./components/Layout";
-import Profile from "./components/Profile";
-import ProjectCard from "./components/ProjectCard";
-import Skills from "./components/Skills";
-import Stats from "./components/Stats";
-
+import Education from "./components/Education";
+import ProjectList from "./components/ProjectList"; // We'll create this or refactor ProjectCard
+import Marquee from "./components/Marquee";
 import { portfolioData } from "./data/portfolio";
 
 function App(): React.JSX.Element {
-	const { profile, projects, experience, stats, skills, education, interests } =
-		portfolioData;
+	const [activeTab, setActiveTab] = useState("home");
+	const { profile, projects, experience, education } = portfolioData;
+
+	const renderContent = () => {
+		switch (activeTab) {
+			case "home":
+				return <Home name={profile.name} title={profile.title} />;
+			case "experience":
+				return <Experience experiences={experience} />;
+			case "projects":
+				return <ProjectList projects={projects} />;
+			case "education":
+				return <Education education={education} />;
+			default:
+				return <Home name={profile.name} title={profile.title} />;
+		}
+	};
 
 	return (
-		<Layout>
-			{/* Profile Section */}
-			<Profile data={profile} />
-
-			{/* Work Experience */}
-			<Experience experiences={experience} />
-
-			{/* Projects - Render all dynamically */}
-			{projects.map((project) => (
-				<ProjectCard key={project.id} project={project} />
-			))}
-
-			{/* Performance Stats */}
-			<Stats stats={stats} />
-
-			{/* Skills Matrix */}
-			<Skills skills={skills} />
-
-			{/* Education */}
-			<Education education={education} />
-
-			{/* Interests */}
-			<Interests interests={interests} />
-		</Layout>
+		<>
+			<div className="max-w-7xl mx-auto px-6 md:px-12 pb-32">
+				<Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+				<main className="mt-8 md:mt-16">
+					{renderContent()}
+				</main>
+			</div>
+			<Marquee />
+		</>
 	);
 }
 
