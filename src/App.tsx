@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Experience from "./components/Experience";
-import Education from "./components/Education";
 import ProjectList from "./components/ProjectList"; // We'll create this or refactor ProjectCard
 import Marquee from "./components/Marquee";
 import { portfolioData } from "./data/portfolio";
@@ -16,11 +15,9 @@ function App(): React.JSX.Element {
 			case "home":
 				return <Home name={profile.name} title={profile.title} />;
 			case "experience":
-				return <Experience experiences={experience} />;
+				return <Experience experiences={experience} education={education} />;
 			case "projects":
 				return <ProjectList projects={projects} />;
-			case "education":
-				return <Education education={education} />;
 			default:
 				return <Home name={profile.name} title={profile.title} />;
 		}
