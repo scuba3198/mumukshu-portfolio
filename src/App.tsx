@@ -34,7 +34,7 @@ function App(): React.JSX.Element {
 					{renderContent()}
 				</main>
 			</div>
-			<Marquee />
+			{activeTab === "home" && <Marquee />}
 		</>
 	);
 }

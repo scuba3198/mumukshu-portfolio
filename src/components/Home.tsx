@@ -13,7 +13,7 @@ const Home: React.FC<HomeProps> = ({ name, title }) => {
     return (
         <div className="flex flex-col items-center justify-center min-h-[60vh] md:min-h-[70vh] text-center px-4 overflow-hidden">
             <div className="relative mb-6 md:mb-10">
-                <h1 className="text-6xl sm:text-7xl md:text-9xl font-black tracking-tighter text-outline uppercase select-none leading-none strikethrough-bold">
+                <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter text-outline uppercase select-none leading-none strikethrough-bold">
                     {displayName}
                 </h1>
             </div>
