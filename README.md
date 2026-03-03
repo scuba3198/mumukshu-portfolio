@@ -19,21 +19,17 @@ This portfolio showcases professional journey, featured projects, and technical 
 - **Brutalist Redesign**: Reimagined with a high-contrast black/white/orange aesthetic, inspired by modern minimal branding.
 - **Typography-First Logic**: Focused on clear, bold communication and sophisticated font pairings.
 - **Scrolling Marquee Ticker**: A slanted, high-energy infinite ticker at the bottom of the viewport featuring custom branding messages.
-- **Tabbed Interaction**: A focused, tab-based navigation system (Home, Experience, Projects, Education) for a zero-distraction user journey.
+- **Tabbed Interaction**: A focused, tab-based navigation system (Home, Experience, Projects) for a zero-distraction user journey.
 - **Mobile-First Excellence**: Precision-tuned layout, typography, and animation speeds for small screens.
-- **Modern Stack**: Built with React 19, TypeScript, Vite, and Tailwind CSS v3.
-- **Strict Data Integrity**: Portfolio content is validated via **Zod** schemas for bulletproof reliability.
-- **Clean Architecture**: Dependency boundaries enforced via **dependency-cruiser** to prevent circular references.
+- **Modern Stack**: Built with React 19, TypeScript (`@tsconfig/strictest`), Vite, and Tailwind CSS v3.
 
 ## 🛠️ Tech Stack
 
 - **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (`@tsconfig/strictest`)
-- **Validation**: [Zod](https://zod.dev/) (Build-time schema definitions)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Custom Premium Theme)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Linting & Formatting**: [Oxlint](https://oxc.rs/) + [Prettier](https://prettier.io/)
-- **Architecture**: [Dependency-Cruiser](https://github.com/sverweij/dependency-cruiser)
 
 ## 📂 Project Structure
 
@@ -41,54 +37,50 @@ This portfolio showcases professional journey, featured projects, and technical 
 src/
 ├── components/       # Reusable UI components (.tsx)
 │   ├── Layout.tsx    # Main page wrapper with ambient effects
-│   └── ...           # Other redesigned bento-grid components
+│   └── ...           # Other redesigned components
 ├── data/
-│   └── portfolio.ts  # 📝 Validated portfolio content
-├── schemas/
-│   └── portfolio.ts  # Zod schemas for runtime validation
-├── utils/
-│   └── logger.ts     # Centralized lightweight logger wrapper
+│   └── portfolio.ts  # Portfolio content
 ├── types/
-│   └── portfolio.ts  # Type definitions and interfaces
+│   └── portfolio.ts  # TypeScript type definitions
 ├── App.tsx           # Main application entry
 └── main.tsx          # React DOM root
 ```
 
 ## 📦 Getting Started
 
-1.  **Clone the repository**
+1. **Clone the repository**
 
-    ```bash
-    git clone https://github.com/scuba3198/mumukshu-portfolio.git
-    cd mumukshu-portfolio
-    ```
+   ```bash
+   git clone https://github.com/scuba3198/mumukshu-portfolio.git
+   cd mumukshu-portfolio
+   ```
 
-2.  **Install Dependencies**
+2. **Install dependencies**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
-3.  **Run Locally**
+3. **Run locally**
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
-    Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-4.  **Lint & Format**
+4. **Lint & format**
 
-    ```bash
-    npm run lint      # Runs Oxlint check
-    npm run format    # Runs Prettier formatting
-    npm run depcruise # Checks for circular dependencies
-    ```
+   ```bash
+   npm run lint      # Oxlint
+   npm run format    # Prettier
+   ```
 
-5.  **Build for Production**
-    ```bash
-    npm run build     # Runs type-check (tsc) then vite build
-    ```
+5. **Build for production**
+
+   ```bash
+   npm run build     # typecheck → lint → vite build
+   ```
 
 ## 🎨 Design Philosophy
 
