@@ -3,7 +3,7 @@ import type { PortfolioData } from "../types/portfolio";
 const rawPortfolioData: PortfolioData = {
 	profile: {
 		name: "Mumukshu D.C.",
-		title: "PTE Instructor & EdTech Developer",
+		title: "IELTS/PTE Instructor & EdTech Developer",
 		location: "Kathmandu, Nepal",
 		phone: "9862329617",
 		email: "phoenixrising656@gmail.com",
