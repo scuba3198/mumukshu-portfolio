@@ -12,20 +12,18 @@
 
 > **PTE Instructor & EdTech Developer** specializing in English proficiency coaching and modern web development.
 
-This portfolio showcases my professional journey, featured projects, and technical skills. It has been reimagined as a modern **React & TypeScript application**, moving away from static HTML to a scalable component-based architecture.
+This portfolio showcases professional journey, featured projects, and technical skills through a **high-contrast minimalist aesthetic**.
 
 ## 🚀 Features
 
-- **Premium UI/UX**: Reimagined with a state-of-the-art "Premium Deep Dark" aesthetic and high-end glassmorphism.
-- **Dual Theme Support**: Native Light/Dark mode switcher with automatic system preference detection and zero-flash initialization.
-- **Ambient Lighting**: CSS-animated background glowing orbs that react to the current theme.
-- **Micro-interactions**: Refined hover states, rotating icons, dynamic link translations, and pulsing glowing indicators for current roles.
+- **Brutalist Redesign**: Reimagined with a high-contrast black/white/orange aesthetic, inspired by modern minimal branding.
+- **Typography-First Logic**: Focused on clear, bold communication and sophisticated font pairings.
+- **Scrolling Marquee Ticker**: A slanted, high-energy infinite ticker at the bottom of the viewport featuring custom branding messages.
+- **Tabbed Interaction**: A focused, tab-based navigation system (Home, Experience, Projects, Education) for a zero-distraction user journey.
+- **Mobile-First Excellence**: Precision-tuned layout, typography, and animation speeds for small screens.
 - **Modern Stack**: Built with React 19, TypeScript, Vite, and Tailwind CSS v3.
-- **Strict Linting & Formatting**: Powered by [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for ultra-fast linting and [Prettier](https://prettier.io/) for high-performance formatting.
-- **Strict Type Safety**: Extended with `@tsconfig/strictest` for maximum compile-time safety and data integrity.
-- **Dependency Boundaries**: Enforced via **dependency-cruiser** to prevent circular dependencies and maintain clean architecture.
-- **Componentized Design**: Modular structure with reusable components (`ProjectCard`, `Experience`, `Stats`, etc.).
-- **Responsive Layout**: Fully responsive Bento-grid design inspired by premium tech portfolios.
+- **Strict Data Integrity**: Portfolio content is validated via **Zod** schemas for bulletproof reliability.
+- **Clean Architecture**: Dependency boundaries enforced via **dependency-cruiser** to prevent circular references.
 
 ## 🛠️ Tech Stack
 
@@ -94,7 +92,7 @@ src/
 
 ## 🎨 Design Philosophy
 
-The design uses a **Bento-grid** layout, popular in modern UI/UX for its clean organization and visual hierarchy. It combines a sophisticated font pairing (**Inter** for UI text and **Playfair Display** for headers) with a neutral stone color palette accented by yellow and purple for featured elements.
+The design shifts from a broad Bento-grid to a **focused High-Contrast Minimalism**. It leverages a brutalist-inspired orange-on-black color palette to create strong visual hierarchy. The inclusion of a slanted scrolling marquee adds a dynamic branding element that breaks the traditional layout, creating a memorable "agency-grade" professional identity.
 
 ## 📄 License
 
