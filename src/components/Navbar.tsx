@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 		{
 			id: "resume",
 			label: "Resume",
-			href: "/mumukshu-portfolio/Mumukshu_DC_Resume.pdf",
+			href: "/mumukshu-portfolio/Mumukshu_DC_Resume_Updated.pdf",
 		},
 	];
 
