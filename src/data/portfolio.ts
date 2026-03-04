@@ -4,9 +4,6 @@ const rawPortfolioData: PortfolioData = {
 	profile: {
 		name: "Mumukshu D.C.",
 		title: "IELTS/PTE Instructor & EdTech Developer",
-		location: "Kathmandu, Nepal",
-		phone: "9862329617",
-		email: "phoenixrising656@gmail.com",
 	},
 	projects: [
 		{
@@ -17,16 +14,6 @@ const rawPortfolioData: PortfolioData = {
 			tags: ["React + TS", "Advanced Generative Models", "Tailwind CSS"],
 			link: "https://pro.essay-architect.uk/",
 			isFeatured: true,
-			iconName: "Code2",
-			theme: {
-				bg: "bg-stone-900",
-				text: "text-white",
-				border: "border-stone-800",
-				hoverBorder: "hover:border-stone-600",
-				accent: "text-yellow-400",
-				tagBg: "bg-stone-800",
-				tagText: "text-yellow-400",
-			},
 		},
 		{
 			id: "geoflux",
@@ -36,16 +23,6 @@ const rawPortfolioData: PortfolioData = {
 			tags: ["React + TS", "Canvas API"],
 			link: "https://scuba3198.github.io/Geoflux/",
 			isFeatured: false,
-			iconName: "Palette",
-			theme: {
-				bg: "bg-stone-900",
-				text: "text-white",
-				border: "border-stone-800",
-				hoverBorder: "hover:border-purple-500",
-				accent: "text-purple-400",
-				tagBg: "bg-stone-800",
-				tagText: ["text-purple-400", "text-cyan-400"],
-			},
 		},
 		{
 			id: "pte-class-coverage",
@@ -56,18 +33,6 @@ const rawPortfolioData: PortfolioData = {
 			link: "https://scuba3198.github.io/pte-class-coverage/",
 			isFeatured: false,
 			category: "EdTech Tool",
-			categoryBg: "bg-blue-600",
-			categoryText: "text-blue-600 dark:text-blue-400",
-			iconName: "ClipboardCheck",
-			theme: {
-				bg: "bg-stone-900",
-				text: "text-white",
-				border: "border-stone-800",
-				hoverBorder: "hover:border-blue-500",
-				accent: "text-blue-400",
-				tagBg: "bg-stone-800",
-				tagText: "text-blue-400",
-			},
 		},
 		{
 			id: "salary-calculator",
@@ -78,18 +43,6 @@ const rawPortfolioData: PortfolioData = {
 			link: "https://scuba3198.github.io/salary-calculator/",
 			isFeatured: false,
 			category: "Productivity Tool",
-			categoryBg: "bg-emerald-600",
-			categoryText: "text-emerald-600 dark:text-emerald-400",
-			iconName: "Calculator",
-			theme: {
-				bg: "bg-stone-900",
-				text: "text-white",
-				border: "border-stone-800",
-				hoverBorder: "hover:border-emerald-500",
-				accent: "text-emerald-400",
-				tagBg: "bg-stone-800",
-				tagText: "text-emerald-400",
-			},
 		},
 		{
 			id: "tms-captcha",
@@ -100,18 +53,6 @@ const rawPortfolioData: PortfolioData = {
 			link: "https://github.com/scuba3198/tms-captcha",
 			isFeatured: true,
 			category: "Security & Automation",
-			categoryBg: "bg-orange-600",
-			categoryText: "text-orange-600 dark:text-orange-400",
-			iconName: "Scan",
-			theme: {
-				bg: "bg-stone-900",
-				text: "text-white",
-				border: "border-stone-800",
-				hoverBorder: "hover:border-orange-500",
-				accent: "text-orange-400",
-				tagBg: "bg-stone-800",
-				tagText: "text-orange-400",
-			},
 		},
 	],
 	experience: [
@@ -174,19 +115,6 @@ const rawPortfolioData: PortfolioData = {
 			isCurrent: false,
 		},
 	],
-	stats: [
-		{
-			value: "99%",
-			label: "Student Success Rate (>60 Score)",
-			badge: "High Impact",
-		},
-		{ value: "8.0", label: "Overall Band (8.5 L/R)", subLabel: "IELTS" },
-		{ value: "90", label: "Writing Score (77 Overall)", subLabel: "PTE" },
-	],
-	skills: {
-		pedagogical: ["Curriculum Design", "Test Strategy", "Virtual Instruction"],
-		technical: ["Prompt Engineering", "Rapid Prototyping", "UI/UX Basics"],
-	},
 	education: [
 		{
 			degree: "B.E. in Software Engineering",
@@ -204,9 +132,6 @@ const rawPortfolioData: PortfolioData = {
 			year: "2021",
 		},
 	],
-	interests: {
-		list: "Stock Market Analysis • Video Games • Cinema",
-	},
 };
 
 export const portfolioData: PortfolioData = rawPortfolioData;
