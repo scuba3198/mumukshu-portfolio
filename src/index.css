@@ -11,23 +11,121 @@
 		@apply text-white;
 	}
 
-	.strikethrough-bold {
-		position: relative;
-		display: inline-block;
+	/* ================================================
+	   HERO NAME ANIMATION — Letter Slam + Blade Slash
+	   ================================================ */
+
+	/* Individual letter — starts invisible, slams down from above in 3D */
+	.hero-letter {
+		opacity: 0;
+		transform: rotateX(-90deg) translateY(-60px) skewX(var(--letter-skew, 0deg));
+		transform-origin: top center;
+		filter: blur(8px);
+		transition: none;
 	}
 
-	.strikethrough-bold::after {
-		content: "";
+	.hero-letter--visible {
+		animation: heroLetterSlam 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	}
+
+	@keyframes heroLetterSlam {
+		0% {
+			opacity: 0;
+			transform: rotateX(-90deg) translateY(-80px) skewX(var(--letter-skew, 0deg)) scale(1.4);
+			filter: blur(12px);
+			text-shadow: 0 0 40px rgba(249, 115, 22, 0.8);
+		}
+		60% {
+			opacity: 1;
+			transform: rotateX(8deg) translateY(4px) skewX(var(--letter-skew, 0deg)) scale(1.03);
+			filter: blur(0px);
+			text-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+		}
+		78% {
+			transform: rotateX(-4deg) translateY(-2px) skewX(var(--letter-skew, 0deg)) scale(0.98);
+			text-shadow: 0 0 0px rgba(249, 115, 22, 0);
+		}
+		90% {
+			transform: rotateX(2deg) translateY(1px) scale(1.005);
+		}
+		100% {
+			opacity: 1;
+			transform: rotateX(0deg) translateY(0px) skewX(0deg) scale(1);
+			filter: blur(0px);
+			text-shadow: none;
+		}
+	}
+
+	/* Strikethrough blade slash */
+	.hero-strikethrough {
+		display: block;
 		position: absolute;
 		left: 0;
 		top: 50%;
-		width: 100%;
+		transform: translateY(-50%);
 		height: 4px;
 		@apply md:h-[6px];
-		background-color: #f97316;
-		/* Orange-500 */
-		transform: translateY(-50%);
+		width: 0%;
+		background: linear-gradient(90deg, #f97316 0%, #fb923c 60%, #ffffff44 100%);
+		box-shadow:
+			0 0 8px 2px rgba(249, 115, 22, 0.9),
+			0 0 24px 6px rgba(249, 115, 22, 0.5);
 		z-index: 10;
+		border-radius: 2px;
+		pointer-events: none;
+		filter: blur(0.3px);
+	}
+
+	.hero-strikethrough--visible {
+		animation: bladeSweep 0.38s cubic-bezier(0.25, 1, 0.5, 1) forwards,
+			       bladeGlowFade 1.2s ease-out 0.38s forwards;
+	}
+
+	@keyframes bladeSweep {
+		0% {
+			width: 0%;
+			box-shadow:
+				0 0 16px 6px rgba(249, 115, 22, 1),
+				0 0 40px 12px rgba(249, 115, 22, 0.7);
+		}
+		100% {
+			width: 100%;
+			box-shadow:
+				0 0 8px 2px rgba(249, 115, 22, 0.8),
+				0 0 20px 6px rgba(249, 115, 22, 0.4);
+		}
+	}
+
+	@keyframes bladeGlowFade {
+		0% {
+			box-shadow:
+				0 0 8px 2px rgba(249, 115, 22, 0.8),
+				0 0 20px 6px rgba(249, 115, 22, 0.4);
+			background: linear-gradient(90deg, #f97316 0%, #fb923c 60%, #ffffff44 100%);
+		}
+		100% {
+			box-shadow:
+				0 0 2px 1px rgba(249, 115, 22, 0.3),
+				0 0 0px 0px rgba(249, 115, 22, 0);
+			background: #f97316;
+		}
+	}
+
+	/* Subtitle fade-up */
+	.hero-title {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+
+	.hero-title--visible {
+		animation: heroTitleReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	}
+
+	@keyframes heroTitleReveal {
+		to {
+			opacity: 0.9;
+			transform: translateY(0);
+		}
 	}
 
 	.text-outline {
@@ -89,6 +187,21 @@
 body {
 	@apply bg-black text-white selection:bg-orange-500/30 min-h-screen;
 	font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Hero screen-shake shockwave on strikethrough impact */
+@keyframes heroShake {
+	0%   { transform: translate(0, 0) rotate(0deg); }
+	15%  { transform: translate(-4px, 3px) rotate(-0.4deg); }
+	30%  { transform: translate(4px, -3px) rotate(0.4deg); }
+	45%  { transform: translate(-3px, 2px) rotate(-0.2deg); }
+	60%  { transform: translate(3px, -1px) rotate(0.2deg); }
+	75%  { transform: translate(-1px, 1px) rotate(0deg); }
+	100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.hero-shake {
+	animation: heroShake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 
