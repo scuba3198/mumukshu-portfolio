@@ -3,7 +3,7 @@ import type { PortfolioData } from "../types/portfolio";
 const rawPortfolioData: PortfolioData = {
 	profile: {
 		name: "Mumukshu D.C.",
-		title: "IELTS/PTE Instructor & EdTech Developer",
+		title: "IELTS/PTE Instructor & Software Engineer",
 	},
 	projects: [
 		{

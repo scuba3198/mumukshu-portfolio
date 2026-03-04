@@ -2,7 +2,7 @@ import React from "react";
 
 const Marquee: React.FC = () => {
 	const message =
-		"WELCOME TO MY PORTFOLIO • IELTS/PTE INSTRUCTOR • EDTECH DEVELOPER • LET'S CONNECT • ";
+		"WELCOME TO MY PORTFOLIO • IELTS/PTE INSTRUCTOR • SOFTWARE ENGINEER • LET'S CONNECT • ";
 
 	return (
 		<div className="marquee-container fixed -bottom-8 left-0 w-full z-50 pointer-events-none select-none">
