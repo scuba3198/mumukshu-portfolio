@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Experience from "./components/Experience";
-import ProjectList from "./components/ProjectList"; // We'll create this or refactor ProjectCard
+import ProjectList from "./components/ProjectList";
 import Marquee from "./components/Marquee";
 import { portfolioData } from "./data/portfolio";
 
