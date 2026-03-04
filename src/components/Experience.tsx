@@ -19,7 +19,9 @@ const Experience: React.FC<ExperienceProps> = ({ experiences, education }) => {
 									<h3 className="text-lg md:text-xl font-bold text-white group-hover:text-orange-500 transition-colors">
 										{exp.role}
 									</h3>
-									<p className="text-stone-300 font-medium text-sm md:text-base">{exp.company}</p>
+									<p className="text-stone-300 font-medium text-sm md:text-base">
+										{exp.company}
+									</p>
 								</div>
 								<span className="mono text-[10px] md:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap">
 									{exp.period}
@@ -28,10 +30,14 @@ const Experience: React.FC<ExperienceProps> = ({ experiences, education }) => {
 
 							<ul className="space-y-3">
 								{exp.highlights.map((highlight, idx) => (
-									<li key={idx} className="flex gap-3 text-xs md:text-sm text-stone-400 leading-relaxed">
+									<li
+										key={idx}
+										className="flex gap-3 text-xs md:text-sm text-stone-400 leading-relaxed"
+									>
 										<span className="text-orange-500 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" />
 										<span className="w-full">
-											{highlight.type === "innovation" || highlight.type === "impact" ? (
+											{highlight.type === "innovation" ||
+											highlight.type === "impact" ? (
 												<strong className="text-stone-300 font-bold uppercase text-[9px] md:text-[10px] tracking-wider mr-2">
 													{highlight.type}:
 												</strong>
@@ -50,12 +56,17 @@ const Experience: React.FC<ExperienceProps> = ({ experiences, education }) => {
 				<h2 className="section-title">Education</h2>
 				<div className="flex flex-col">
 					{education.map((edu, idx) => (
-						<div key={idx} className="list-item-container flex flex-col md:flex-row justify-between items-start md:items-baseline gap-2 w-full group">
+						<div
+							key={idx}
+							className="list-item-container flex flex-col md:flex-row justify-between items-start md:items-baseline gap-2 w-full group"
+						>
 							<div className="w-full">
 								<h3 className="text-lg md:text-xl font-bold text-white group-hover:text-orange-500 transition-colors">
 									{edu.degree}
 								</h3>
-								<p className="text-stone-400 text-sm md:text-base">{edu.institution}</p>
+								<p className="text-stone-400 text-sm md:text-base">
+									{edu.institution}
+								</p>
 							</div>
 							<span className="mono text-[10px] md:text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap">
 								{edu.year}
