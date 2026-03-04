@@ -28,10 +28,10 @@ const rawPortfolioData: PortfolioData = {
 			id: "pte-class-coverage",
 			title: "PTE Class Coverage Studio",
 			description:
-				"A local-first tracker for PTE Academic class coverage. Monitor question types by module, log sessions with auto-save, manage multiple classes, and export/import JSON backups. Works fully offline after first load.",
-			tags: ["React + TS", "localStorage", "Vitest"],
+				"A type-safe PTE Academic tracker with Cloud Sync and identity-based locking. Features a Clean Architecture, Zod-validated domain models, and a robust offline-first Guest Mode. Includes automated export/import and session logging.",
+			tags: ["React 19", "Supabase", "Clean Architecture", "Vitest"],
 			link: "https://scuba3198.github.io/pte-class-coverage/",
-			isFeatured: false,
+			isFeatured: true,
 			category: "EdTech Tool",
 		},
 		{
