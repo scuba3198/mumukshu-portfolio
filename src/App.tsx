@@ -27,9 +27,7 @@ function App(): React.JSX.Element {
 		<>
 			<div className="max-w-7xl mx-auto px-6 md:px-12 pb-32">
 				<Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
-				<main className="mt-8 md:mt-16">
-					{renderContent()}
-				</main>
+				<main className="mt-8 md:mt-16">{renderContent()}</main>
 			</div>
 			{activeTab === "home" && <Marquee />}
 		</>

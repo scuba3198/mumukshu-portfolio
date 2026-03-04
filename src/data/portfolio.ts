@@ -62,8 +62,14 @@ const rawPortfolioData: PortfolioData = {
 			role: "PTE Instructor",
 			period: "Jun 2025 – Present",
 			highlights: [
-				{ type: "general", text: "Currently teaching 4 hours per day across multiple batches due to exceptionally high student retention and feedback." },
-				{ type: "innovation", text: "Conceptualized and built Essay Architect to solve the 'blank page' problem, and PTE Class Coverage Studio for systematic curriculum tracking." }
+				{
+					type: "general",
+					text: "Currently teaching 4 hours per day across multiple batches due to exceptionally high student retention and feedback.",
+				},
+				{
+					type: "innovation",
+					text: "Conceptualized and built Essay Architect to solve the 'blank page' problem, and PTE Class Coverage Studio for systematic curriculum tracking.",
+				},
 			],
 			color: "bg-stone-900",
 			isCurrent: true,
@@ -74,7 +80,10 @@ const rawPortfolioData: PortfolioData = {
 			role: "PTE Instructor",
 			period: "Aug 2025 – Nov 2025",
 			highlights: [
-				{ type: "general", text: "Delivered intensive daily PTE preparation classes, focusing on rapid score improvement strategies." }
+				{
+					type: "general",
+					text: "Delivered intensive daily PTE preparation classes, focusing on rapid score improvement strategies.",
+				},
 			],
 			color: "bg-stone-300",
 			isCurrent: false,
@@ -85,7 +94,10 @@ const rawPortfolioData: PortfolioData = {
 			role: "IELTS & PTE Instructor",
 			period: "Jul 2025 – Nov 2025",
 			highlights: [
-				{ type: "general", text: "Managed daily IELTS and PTE classes, guiding students through effective exam preparation strategies 6 days/week." }
+				{
+					type: "general",
+					text: "Managed daily IELTS and PTE classes, guiding students through effective exam preparation strategies 6 days/week.",
+				},
 			],
 			color: "bg-stone-300",
 			isCurrent: false,
@@ -96,8 +108,14 @@ const rawPortfolioData: PortfolioData = {
 			role: "PTE Instructor",
 			period: "Dec 2024 – Jun 2025",
 			highlights: [
-				{ type: "general", text: "Designed comprehensive PTE curriculum for diverse age groups." },
-				{ type: "impact", text: "99% of students scored above 60 under my mentorship." }
+				{
+					type: "general",
+					text: "Designed comprehensive PTE curriculum for diverse age groups.",
+				},
+				{
+					type: "impact",
+					text: "99% of students scored above 60 under my mentorship.",
+				},
 			],
 			color: "bg-stone-300",
 			isCurrent: false,
@@ -108,8 +126,14 @@ const rawPortfolioData: PortfolioData = {
 			role: "PTE & OET Instructor (Remote)",
 			period: "Nov 2024 – Jun 2025",
 			highlights: [
-				{ type: "general", text: "Taught specialized English proficiency to nurses post-NCLEX for US migration." },
-				{ type: "impact", text: "Achieved a near-perfect first-attempt success rate for nursing students." }
+				{
+					type: "general",
+					text: "Taught specialized English proficiency to nurses post-NCLEX for US migration.",
+				},
+				{
+					type: "impact",
+					text: "Achieved a near-perfect first-attempt success rate for nursing students.",
+				},
 			],
 			color: "bg-stone-300",
 			isCurrent: false,
