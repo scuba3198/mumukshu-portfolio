@@ -1,95 +1,94 @@
 # Mumukshu D.C. | Portfolio
 
-![React](https://img.shields.io/badge/-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Oxlint](https://img.shields.io/badge/-Oxlint-red?style=for-the-badge&logo=oxlint&logoColor=white)
-![Prettier](https://img.shields.io/badge/-Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white)
+<div align="center">
+  <img src="public/favicon.svg" width="96" alt="Portfolio Icon">
+  
+  # Mumukshu D.C. Portfolio
+  *IELTS/PTE Instructor & Software Engineer*
+  
+  [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-2ea44f?style=flat-square&logo=github)](https://scuba3198.github.io/mumukshu-portfolio/)
+  [![GitHub License](https://img.shields.io/github/license/scuba3198/mumukshu-portfolio?style=flat-square)](LICENSE)
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-2ea44f?style=for-the-badge&logo=github)](https://scuba3198.github.io/mumukshu-portfolio/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+  ⭐ If you like this project, star it on GitHub!
 
-> **PTE Instructor & Software Engineer** specializing in English proficiency coaching and modern web development.
+  [Features](#features) • [Tech Stack](#tech-stack) • [Getting Started](#getting-started) • [Design System](#design-system)
+</div>
 
-This portfolio showcases professional journey, featured projects, and technical skills through a **high-contrast minimalist aesthetic**.
+A responsive, high-contrast minimalist portfolio showcasing professional journey, selected EdTech tools, automation scripts, and contributions. Rebuilt with a brutalist-inspired theme featuring typography-first design, interactive tabs, and fluid, responsive interfaces.
 
-## 🚀 Features
+## Features
 
-- **Brutalist Redesign**: Reimagined with a high-contrast black/white/orange aesthetic, inspired by modern minimal branding.
-- **Typography-First Logic**: Focused on clear, bold communication and sophisticated font pairings.
-- **Scrolling Marquee Ticker**: A slanted, high-energy infinite ticker at the bottom of the viewport featuring custom branding messages.
-- **Tabbed Interaction**: A focused, tab-based navigation system (Home, Experience, Projects) for a zero-distraction user journey.
-- **Mobile-First Excellence**: Precision-tuned layout, typography, and animation speeds for small screens.
-- **Modern Stack**: Built with React 19, TypeScript (`@tsconfig/strictest`), Vite, and Tailwind CSS v3.
+- **Brutalist Theme** - Reimagined with a premium high-contrast black/white/orange aesthetic.
+- **Tabbed Interaction** - Zero-distraction navigation layout (Home, Experience, Projects).
+- **Infinite Scrolling Marquee** - Slanted, high-energy scrolling ticker at the bottom.
+- **Mobile-First Design** - Precision-tuned layouts and animations optimized for all device sizes.
+- **Clean Stack** - Built using modern React 19, TypeScript (with strict compiler config), Vite, and Tailwind CSS.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (`@tsconfig/strictest`)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Custom Premium Theme)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Linting & Formatting**: [Oxlint](https://oxc.rs/) + [Prettier](https://prettier.io/)
+- **Core Framework**: React 19 + TypeScript (strict mode)
+- **Styling & Theme**: Tailwind CSS
+- **Icons**: Lucide React
+- **Build Engine**: Vite
+- **Code Quality**: Oxlint + Prettier
 
-## 📂 Project Structure
+## Getting Started
 
-```bash
-src/
-├── components/       # Reusable UI components (.tsx)
-│   ├── Layout.tsx    # Main page wrapper with ambient effects
-│   └── ...           # Other redesigned components
-├── data/
-│   └── portfolio.ts  # Portfolio content
-├── types/
-│   └── portfolio.ts  # TypeScript type definitions
-├── App.tsx           # Main application entry
-└── main.tsx          # React DOM root
-```
+### Prerequisites
 
-## 📦 Getting Started
+Ensure you have [Node.js](https://nodejs.org) (v18+) installed.
 
-1. **Clone the repository**
+### Setup and Running
 
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/scuba3198/mumukshu-portfolio.git
    cd mumukshu-portfolio
    ```
 
-2. **Install dependencies**
-
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Run locally**
-
+3. **Run the local development server:**
    ```bash
    npm run dev
    ```
+   Open [http://localhost:5173/mumukshu-portfolio/](http://localhost:5173/mumukshu-portfolio/) to preview.
 
-   Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-4. **Lint & format**
-
+4. **Verify quality & formatting:**
    ```bash
-   npm run lint      # Oxlint
-   npm run format    # Prettier
+   npm run lint      # Runs Oxlint
+   npm run typecheck # Verifies TypeScript typings
    ```
 
-5. **Build for production**
-
+5. **Build for production:**
    ```bash
-   npm run build     # typecheck → lint → vite build
+   npm run build
    ```
 
-## 🎨 Design Philosophy
+> [!TIP]
+   > The build process runs both TypeScript compilation (`tsc`) and Oxlint checks before outputting assets to verify type safety and prevent deployment errors.
 
-The design shifts from a broad Bento-grid to a **focused High-Contrast Minimalism**. It leverages a brutalist-inspired orange-on-black color palette to create strong visual hierarchy. The inclusion of a slanted scrolling marquee adds a dynamic branding element that breaks the traditional layout, creating a memorable "agency-grade" professional identity.
+## Project Structure
 
-## 📄 License
+```text
+src/
+├── components/       # UI Components (Navbar, Experience, ProjectList, Home, Marquee)
+├── data/             # Portfolio source data (portfolio.ts)
+├── types/            # TypeScript type definitions (portfolio.ts)
+├── App.tsx           # Application entrypoint
+└── main.tsx          # Render entrypoint
+```
 
-This project is licensed under the [MIT License](LICENSE).
+## Design System
+
+The layout is built around high-contrast typography and minimalist spacing. It uses a strong visual hierarchy defined by custom HSL Hues and custom animations:
+- **Primary Color:** Orange (`#f97316`) on a dark background.
+- **Typography:** Outfit & Inter (loaded via web fonts).
+- **Effects:** Heavy grid outlines, slashes, and screen shakes for interaction feedback.
 
 ---
 
-© 2025 Mumukshu D.C. All rights reserved.
+© 2026 Mumukshu D.C.
