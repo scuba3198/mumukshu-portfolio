@@ -7,6 +7,16 @@ const rawPortfolioData: PortfolioData = {
 	},
 	projects: [
 		{
+			id: "opensearch-dashboards",
+			title: "OpenSearch Dashboards Contributor",
+			description:
+				"Contributed a critical bug fix to the upstream OpenSearch Dashboards repository (PR #11395) resolving duplicate keyboard shortcut registration for 'focus_query_bar' that was causing visualization page crashes.",
+			tags: ["Open Source", "TypeScript", "React", "OpenSearch"],
+			link: "https://github.com/opensearch-project/OpenSearch-Dashboards/pull/11395",
+			isFeatured: true,
+			category: "Open Source",
+		},
+		{
 			id: "essay-architect",
 			title: "Essay Architect Pro",
 			description:
