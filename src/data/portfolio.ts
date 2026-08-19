@@ -17,32 +17,14 @@ const rawPortfolioData: PortfolioData = {
 			category: "Open Source",
 		},
 		{
-			id: "essay-architect",
-			title: "Essay Architect Pro",
+			id: "nepse-momentum-trader",
+			title: "NEPSE Momentum Trader",
 			description:
-				"A production-ready writing assistant for PTE/IELTS mastery. V0.3.0-pro features an AI Examiner for strict scoring, secure account-based access with multi-device support, and a polished mobile-first experience.",
-			tags: ["React + TS", "Advanced Generative Models", "Tailwind CSS"],
-			link: "https://pro.essay-architect.uk/",
-			isFeatured: true,
-		},
-		{
-			id: "geoflux",
-			title: "GeoFlux",
-			description:
-				"A generative art sandbox powered by particle physics. Features gravity simulation, plexus effects, and customizable fluid dynamics for digital art creation.",
-			tags: ["React + TS", "Canvas API"],
-			link: "https://scuba3198.github.io/Geoflux/",
+				"A privacy-first NEPSE trading dashboard for screening momentum stocks, sizing positions, managing risk, and tracking trades with ATR-based stops.",
+			tags: ["JavaScript", "Trading Strategy", "Local Storage"],
+			link: "https://github.com/scuba3198/nepse-momentum-trader",
 			isFeatured: false,
-		},
-		{
-			id: "pte-class-coverage",
-			title: "PTE Class Coverage Studio",
-			description:
-				"A type-safe PTE Academic tracker with Cloud Sync and identity-based locking. Features a Clean Architecture, Zod-validated domain models, and a robust offline-first Guest Mode. Includes automated export/import and session logging.",
-			tags: ["React 19", "Supabase", "Clean Architecture", "Vitest"],
-			link: "https://scuba3198.github.io/pte-class-coverage/",
-			isFeatured: true,
-			category: "EdTech Tool",
+			category: "Finance Tool",
 		},
 		{
 			id: "salary-calculator",
@@ -55,13 +37,32 @@ const rawPortfolioData: PortfolioData = {
 			category: "Productivity Tool",
 		},
 		{
+			id: "essay-architect",
+			title: "Essay Architect Pro",
+			description:
+				"A production-ready writing assistant for PTE/IELTS mastery. V0.3.0-pro features an AI Examiner for strict scoring, secure account-based access with multi-device support, and a polished mobile-first experience.",
+			tags: ["React + TS", "Advanced Generative Models", "Tailwind CSS"],
+			link: "https://pro.essay-architect.uk/",
+			isFeatured: false,
+		},
+		{
+			id: "pte-class-coverage",
+			title: "PTE Class Coverage Studio",
+			description:
+				"A type-safe PTE Academic tracker with Cloud Sync and identity-based locking. Features a Clean Architecture, Zod-validated domain models, and a robust offline-first Guest Mode. Includes automated export/import and session logging.",
+			tags: ["React 19", "Supabase", "Clean Architecture", "Vitest"],
+			link: "https://scuba3198.github.io/pte-class-coverage/",
+			isFeatured: false,
+			category: "EdTech Tool",
+		},
+		{
 			id: "tms-captcha",
 			title: "TMS Captcha Solver",
 			description:
 				"A high-precision browser extension that locally solves NEPSE TMS captchas using 9-factor spatial density analysis. Features real-time character segmentation, KNN-style pattern matching, and automated input simulation with race condition prevention.",
 			tags: ["TypeScript", "Computer Vision", "Browser Extension"],
 			link: "https://github.com/scuba3198/tms-captcha",
-			isFeatured: true,
+			isFeatured: false,
 			category: "Security & Automation",
 		},
 	],
