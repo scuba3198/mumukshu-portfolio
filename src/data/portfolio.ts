@@ -22,7 +22,7 @@ const rawPortfolioData: PortfolioData = {
 			description:
 				"A privacy-first NEPSE trading dashboard for screening momentum stocks, sizing positions, managing risk, and tracking trades with ATR-based stops.",
 			tags: ["JavaScript", "Trading Strategy", "Local Storage"],
-			link: "https://github.com/scuba3198/nepse-momentum-trader",
+			link: "https://scuba3198.github.io/nepse-momentum-trader/",
 			isFeatured: false,
 			category: "Finance Tool",
 		},
