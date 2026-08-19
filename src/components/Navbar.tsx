@@ -11,11 +11,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 		{ id: "home", label: "Home" },
 		{ id: "experience", label: "Experience" },
 		{ id: "projects", label: "Projects" },
-		{
-			id: "resume",
-			label: "Resume",
-			href: "/mumukshu-portfolio/Mumukshu_DC_Resume_Updated.pdf",
-		},
+		{ id: "resume", label: "Resume" },
 	];
 
 	return (
@@ -30,23 +26,12 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 			<ul className="flex items-center gap-4 md:gap-12">
 				{navItems.map((item) => (
 					<li key={item.id}>
-						{item.id === "resume" ? (
-							<a
-								href={item.href}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-[10px] md:text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors duration-300 cursor-pointer"
-							>
-								{item.label}
-							</a>
-						) : (
-							<button
-								onClick={() => setActiveTab(item.id)}
-								className={`text-[10px] md:text-sm uppercase tracking-widest transition-colors duration-300 cursor-pointer ${activeTab === item.id ? "text-white" : "text-stone-500 hover:text-white"}`}
-							>
-								{item.label}
-							</button>
-						)}
+						<button
+							onClick={() => setActiveTab(item.id)}
+							className={`text-[10px] md:text-sm uppercase tracking-widest transition-colors duration-300 cursor-pointer ${activeTab === item.id ? "text-white" : "text-stone-500 hover:text-white"}`}
+						>
+							{item.label}
+						</button>
 					</li>
 				))}
 			</ul>

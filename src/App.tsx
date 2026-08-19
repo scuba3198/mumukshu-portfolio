@@ -18,6 +18,14 @@ function App(): React.JSX.Element {
 				return <Experience experiences={experience} education={education} />;
 			case "projects":
 				return <ProjectList projects={projects} />;
+			case "resume":
+				return (
+					<iframe
+						src={`${import.meta.env.BASE_URL}Mumukshu_DC_Resume_Updated.pdf`}
+						title="Mumukshu D.C. resume"
+						className="w-full min-h-[75vh] rounded-lg bg-white"
+					/>
+				);
 			default:
 				return <Home name={profile.name} title={profile.title} />;
 		}
