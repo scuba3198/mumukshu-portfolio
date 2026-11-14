@@ -5,67 +5,6 @@ const rawPortfolioData: PortfolioData = {
 		name: "Mumukshu D.C.",
 		title: "IELTS/PTE Instructor & Software Engineer",
 	},
-	projects: [
-		{
-			id: "opensearch-dashboards",
-			title: "OpenSearch Dashboards Contributor",
-			description:
-				"Contributed a critical bug fix to the upstream OpenSearch Dashboards repository (PR #11395) resolving duplicate keyboard shortcut registration for 'focus_query_bar' that was causing visualization page crashes.",
-			tags: ["Open Source", "TypeScript", "React", "OpenSearch"],
-			link: "https://github.com/opensearch-project/OpenSearch-Dashboards/pull/11395",
-			isFeatured: true,
-			category: "Open Source",
-		},
-		{
-			id: "nepse-momentum-trader",
-			title: "NEPSE Momentum Trader",
-			description:
-				"A privacy-first NEPSE trading dashboard for screening momentum stocks, sizing positions, managing risk, and tracking trades with ATR-based stops.",
-			tags: ["JavaScript", "Trading Strategy", "Local Storage"],
-			link: "https://scuba3198.github.io/nepse-momentum-trader/",
-			isFeatured: false,
-			category: "Finance Tool",
-		},
-		{
-			id: "salary-calculator",
-			title: "Nepali Salary Calculator",
-			description:
-				"A professional tool for tracking workdays and calculating monthly earnings using the native Bikram Sambat (B.S.) calendar. Features automated TDS calculation, historical data tracking, and a premium Glassmorphism-style interface.",
-			tags: ["React + TS", "Supabase", "TS-B.S.", "Vanilla CSS"],
-			link: "https://scuba3198.github.io/salary-calculator/",
-			isFeatured: false,
-			category: "Productivity Tool",
-		},
-		{
-			id: "essay-architect",
-			title: "Essay Architect Pro",
-			description:
-				"A production-ready writing assistant for PTE/IELTS mastery. V0.3.0-pro features an AI Examiner for strict scoring, secure account-based access with multi-device support, and a polished mobile-first experience.",
-			tags: ["React + TS", "Advanced Generative Models", "Tailwind CSS"],
-			link: "https://pro.essay-architect.uk/",
-			isFeatured: false,
-		},
-		{
-			id: "pte-class-coverage",
-			title: "PTE Class Coverage Studio",
-			description:
-				"A type-safe PTE Academic tracker with Cloud Sync and identity-based locking. Features a Clean Architecture, Zod-validated domain models, and a robust offline-first Guest Mode. Includes automated export/import and session logging.",
-			tags: ["React 19", "Supabase", "Clean Architecture", "Vitest"],
-			link: "https://scuba3198.github.io/pte-class-coverage/",
-			isFeatured: false,
-			category: "EdTech Tool",
-		},
-		{
-			id: "tms-captcha",
-			title: "TMS Captcha Solver",
-			description:
-				"A high-precision browser extension that locally solves NEPSE TMS captchas using 9-factor spatial density analysis. Features real-time character segmentation, KNN-style pattern matching, and automated input simulation with race condition prevention.",
-			tags: ["TypeScript", "Computer Vision", "Browser Extension"],
-			link: "https://github.com/scuba3198/tms-captcha",
-			isFeatured: false,
-			category: "Security & Automation",
-		},
-	],
 	experience: [
 		{
 			id: 1,
@@ -89,7 +28,7 @@ const rawPortfolioData: PortfolioData = {
 			id: 2,
 			company: "Education Connect Pvt. Ltd.",
 			role: "PTE Instructor",
-			period: "Aug 2025 – Nov 2025",
+			period: "Aug 2025 – Present",
 			highlights: [
 				{
 					type: "general",
@@ -97,13 +36,13 @@ const rawPortfolioData: PortfolioData = {
 				},
 			],
 			color: "bg-stone-300",
-			isCurrent: false,
+			isCurrent: true,
 		},
 		{
 			id: 3,
 			company: "Mark Education Foundation",
 			role: "IELTS & PTE Instructor",
-			period: "Jul 2025 – Nov 2025",
+			period: "Jul 2025 – Present",
 			highlights: [
 				{
 					type: "general",
@@ -111,7 +50,7 @@ const rawPortfolioData: PortfolioData = {
 				},
 			],
 			color: "bg-stone-300",
-			isCurrent: false,
+			isCurrent: true,
 		},
 		{
 			id: 4,

@@ -19,7 +19,7 @@ A responsive, high-contrast minimalist portfolio showcasing professional journey
 ## Features
 
 - **Brutalist Theme** - Reimagined with a premium high-contrast black/white/orange aesthetic.
-- **Tabbed Interaction** - Zero-distraction navigation layout (Home, Experience, Projects).
+- **Tabbed Interaction** - Zero-distraction navigation layout (Home, Experience, Programming, Resume).
 - **Infinite Scrolling Marquee** - Slanted, high-energy scrolling ticker at the bottom.
 - **Mobile-First Design** - Precision-tuned layouts and animations optimized for all device sizes.
 - **Clean Stack** - Built using modern React 19, TypeScript (with strict compiler config), Vite, and Tailwind CSS.
@@ -75,7 +75,7 @@ Ensure you have [Node.js](https://nodejs.org) (v18+) installed.
 
 ```text
 src/
-├── components/       # UI Components (Navbar, Experience, ProjectList, Home, Marquee)
+├── components/       # UI Components (Navbar, Experience, Programming, Home, Marquee)
 ├── data/             # Portfolio source data (portfolio.ts)
 ├── types/            # TypeScript type definitions (portfolio.ts)
 ├── App.tsx           # Application entrypoint

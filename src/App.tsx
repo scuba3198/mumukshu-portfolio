@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Experience from "./components/Experience";
-import ProjectList from "./components/ProjectList";
+import Programming from "./components/Programming";
 import Marquee from "./components/Marquee";
 import { portfolioData } from "./data/portfolio";
 
 function App(): React.JSX.Element {
 	const [activeTab, setActiveTab] = useState("home");
-	const { profile, projects, experience, education } = portfolioData;
+	const { profile, experience, education } = portfolioData;
 
 	const renderContent = () => {
 		switch (activeTab) {
@@ -16,8 +16,8 @@ function App(): React.JSX.Element {
 				return <Home name={profile.name} title={profile.title} />;
 			case "experience":
 				return <Experience experiences={experience} education={education} />;
-			case "projects":
-				return <ProjectList projects={projects} />;
+			case "programming":
+					return <Programming />;
 			case "resume":
 				return (
 					<iframe

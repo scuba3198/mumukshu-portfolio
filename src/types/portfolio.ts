@@ -3,17 +3,6 @@
  * Centralized type definitions for the mumukshu-portfolio project.
  */
 
-// ── Project ──
-export interface Project {
-	id: string;
-	title: string;
-	description: string;
-	tags: string[];
-	link: string;
-	isFeatured: boolean;
-	category?: string; // optional — defaults to "Creative Sandbox"
-}
-
 // ── Experience ──
 export interface ExperienceHighlight {
 	type: "innovation" | "impact" | "general";
@@ -46,7 +35,6 @@ export interface ProfileData {
 // ── Root Data Shape ──
 export interface PortfolioData {
 	profile: ProfileData;
-	projects: Project[];
 	experience: ExperienceItem[];
 	education: EducationItem[];
 }
