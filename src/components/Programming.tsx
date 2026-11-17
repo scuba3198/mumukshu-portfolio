@@ -18,8 +18,8 @@ const Programming: React.FC<ProgrammingProps> = ({ projects }) => {
 			</p>
 			<p className="text-stone-400 text-sm md:text-base leading-relaxed mb-10 max-w-2xl">
 				Small, working tools you can open and try right now. Need something
-				similar for your business? I build fixed-price web tools and hand over
-				the source.
+				similar for your business? Get in touch and tell me what you have in
+				mind.
 			</p>
 
 			<div className="flex flex-col">
