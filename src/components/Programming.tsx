@@ -3,6 +3,7 @@ import { ArrowUpRight, Github } from "lucide-react";
 import type { ProjectItem } from "../types/portfolio";
 
 const GITHUB_URL = "https://github.com/scuba3198";
+const DIVE_LOG_URL = "https://scuba3198.github.io/scuba3198/";
 
 interface ProgrammingProps {
 	projects: ProjectItem[];
@@ -64,15 +65,26 @@ const Programming: React.FC<ProgrammingProps> = ({ projects }) => {
 				))}
 			</div>
 
-			<a
-				href={GITHUB_URL}
-				target="_blank"
-				rel="noopener noreferrer"
-				className="mt-10 inline-flex items-center gap-2 mono text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:text-white transition-colors"
-			>
-				<Github size={14} />
-				More on GitHub
-			</a>
+			<div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+				<a
+					href={GITHUB_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-2 mono text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:text-white transition-colors"
+				>
+					<Github size={14} />
+					More on GitHub
+				</a>
+				<a
+					href={DIVE_LOG_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-2 mono text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:text-white transition-colors"
+				>
+					<ArrowUpRight size={14} />
+					Dive log
+				</a>
+			</div>
 		</div>
 	);
 };
