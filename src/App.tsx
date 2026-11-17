@@ -8,7 +8,7 @@ import { portfolioData } from "./data/portfolio";
 
 function App(): React.JSX.Element {
 	const [activeTab, setActiveTab] = useState("home");
-	const { profile, experience, education } = portfolioData;
+	const { profile, experience, education, projects } = portfolioData;
 
 	const renderContent = () => {
 		switch (activeTab) {
@@ -17,7 +17,7 @@ function App(): React.JSX.Element {
 			case "experience":
 				return <Experience experiences={experience} education={education} />;
 			case "programming":
-					return <Programming />;
+					return <Programming projects={projects} />;
 			case "resume":
 				return (
 					<iframe

@@ -26,6 +26,16 @@ export interface EducationItem {
 	year: string;
 }
 
+// ── Projects ──
+export interface ProjectItem {
+	id: string;
+	name: string;
+	summary: string;
+	tags: string[];
+	repoUrl: string;
+	demoUrl: string;
+}
+
 // ── Profile ──
 export interface ProfileData {
 	name: string;
@@ -37,4 +47,5 @@ export interface PortfolioData {
 	profile: ProfileData;
 	experience: ExperienceItem[];
 	education: EducationItem[];
+	projects: ProjectItem[];
 }

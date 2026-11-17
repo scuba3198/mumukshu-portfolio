@@ -89,6 +89,44 @@ const rawPortfolioData: PortfolioData = {
 			isCurrent: false,
 		},
 	],
+	projects: [
+		{
+			id: "salary-calculator",
+			name: "Salary Calculator",
+			summary:
+				"Tracks workdays on a Bikram Sambat calendar and works out monthly earnings, with sign-in, cloud sync and per-organisation management.",
+			tags: ["React", "TypeScript", "Supabase", "Vite"],
+			repoUrl: "https://github.com/scuba3198/salary-calculator",
+			demoUrl: "https://scuba3198.github.io/salary-calculator/",
+		},
+		{
+			id: "pte-class-coverage",
+			name: "PTE Class Coverage",
+			summary:
+				"Shows a teacher which parts of the curriculum each class has covered, so nothing gets skipped. Works offline and saves to the cloud after sign-in.",
+			tags: ["React", "TypeScript", "Supabase", "Effect"],
+			repoUrl: "https://github.com/scuba3198/pte-class-coverage",
+			demoUrl: "https://scuba3198.github.io/pte-class-coverage/",
+		},
+		{
+			id: "nepse-momentum-trader",
+			name: "NEPSE Momentum Dashboard",
+			summary:
+				"A browser dashboard for NEPSE traders: sizes positions by risk, tracks open orders, trailing stops and closed trades, and reports profit and loss. Data stays in your browser.",
+			tags: ["JavaScript", "HTML", "CSS", "NEPSE"],
+			repoUrl: "https://github.com/scuba3198/nepse-momentum-trader",
+			demoUrl: "https://scuba3198.github.io/nepse-momentum-trader/",
+		},
+		{
+			id: "loan-calculator",
+			name: "Loan Calculator",
+			summary:
+				"Calculates monthly instalments for flat-rate, reducing-balance and bullet loans, with a full repayment schedule, payment tracking and JSON export.",
+			tags: ["ReScript", "React", "Vite"],
+			repoUrl: "https://github.com/scuba3198/loan-calculator",
+			demoUrl: "https://scuba3198.github.io/loan-calculator/",
+		},
+	],
 	education: [
 		{
 			degree: "B.E. in Software Engineering",

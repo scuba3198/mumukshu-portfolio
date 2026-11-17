@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 
 			<div className="flex items-center gap-5 md:gap-6 text-stone-500">
 				<a
-					href="mailto:phoenixrising656@gmail.com"
+					href="mailto:Ozone9730@proton.me"
 					className="hover:text-white transition-colors"
 				>
 					<Mail size={16} className="md:w-[18px] md:h-[18px]" />
